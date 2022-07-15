@@ -45,27 +45,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementManager()
     {
-        float hDirection = Input.GetAxis("Horizontal");
+    
 
-        // Moving Left
-        if (hDirection < 0)
-        {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
+        
+        
+            float hDirection = Input.GetAxis("Horizontal");
+
+            // Moving Left
+            if (hDirection < 0)
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                transform.localScale = new Vector2(-1, 1);
+            }
+
+            //Moving Right
+            else if (hDirection > 0)
+            {
+                rb.velocity = new Vector2(+speed, rb.velocity.y);
+                transform.localScale = new Vector2(1, 1);
+            }
+
+            // Jumping
+            if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
+            {
+                Jump();
+            }
             transform.localScale = new Vector2(-1, 1);
-        }
+        
 
-        //Moving Right
-        else if (hDirection > 0)
-        {
-            rb.velocity = new Vector2(+speed, rb.velocity.y);
-            transform.localScale = new Vector2(1, 1);
-        }
 
-        // Jumping
-        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
-        {
-            Jump();
-        }
     }
 
 

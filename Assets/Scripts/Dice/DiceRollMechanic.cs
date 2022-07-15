@@ -47,7 +47,7 @@ public class DiceRollMechanic : MonoBehaviour {
     }
 
     // Right
-    if (Input.GetKeyDown(KeyCode.RightArrow)) {
+    if(Input.GetKeyDown(KeyCode.RightArrow)) {
       OrentiationHelper.RotateAround(OrentiationHelper.position, Vector3.down, 90.0f);
       keyPress = true;
     }
