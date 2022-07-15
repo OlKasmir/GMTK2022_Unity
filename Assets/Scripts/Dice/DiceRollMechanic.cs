@@ -1,9 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+public class DiceFaceChangeEventArgs : EventArgs {
+  public int previousSide;
+  public int newSide;
+}
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class DiceRoll : MonoBehaviour {
+public class DiceRollMechanic : MonoBehaviour {
+  public delegate void DiceFaceChangeEventHandler(object sender, DiceFaceChangeEventArgs eventArgs);
+  public event DiceFaceChangeEventHandler DiceFaceChange;
+
   [SerializeField, HideInInspector]
   private SpriteRenderer _spriteRenderer;
 
@@ -18,7 +28,6 @@ public class DiceRoll : MonoBehaviour {
   public List<Sprite> DiceSprites { get => _diceSprites; set => _diceSprites = value; }
   private Transform OrentiationHelper { get => _orentiationHelper; set => _orentiationHelper = value; }
 
-
   private void Awake() {
     SpriteRenderer = GetComponent<SpriteRenderer>();
   }
@@ -29,27 +38,28 @@ public class DiceRoll : MonoBehaviour {
 
   private void UpdateInput() {
     bool keyPress = false;
+    int currentSide = GetCurrentSide();
 
     // Up
-    if(Input.GetKeyDown(KeyCode.W)) {
+    if (Input.GetKeyDown(KeyCode.UpArrow)) {
       OrentiationHelper.RotateAround(OrentiationHelper.position, Vector3.right, 90.0f);
       keyPress = true;
     }
 
     // Right
-    if (Input.GetKeyDown(KeyCode.D)) {
+    if (Input.GetKeyDown(KeyCode.RightArrow)) {
       OrentiationHelper.RotateAround(OrentiationHelper.position, Vector3.down, 90.0f);
       keyPress = true;
     }
 
     // Down
-    if (Input.GetKeyDown(KeyCode.S)) {
+    if (Input.GetKeyDown(KeyCode.DownArrow)) {
       OrentiationHelper.RotateAround(OrentiationHelper.position, Vector3.left, 90.0f);
       keyPress = true;
     }
 
     // Left
-    if (Input.GetKeyDown(KeyCode.A)) {
+    if (Input.GetKeyDown(KeyCode.LeftArrow)) {
       OrentiationHelper.RotateAround(OrentiationHelper.position, Vector3.up, 90.0f);
       keyPress = true;
     }
@@ -57,11 +67,20 @@ public class DiceRoll : MonoBehaviour {
     // Update graphics only when necessary (On Key Press)
     if(keyPress) {
       UpdateGraphics();
+
+      DiceFaceChange?.Invoke(this, new DiceFaceChangeEventArgs() { previousSide = currentSide, newSide = GetCurrentSide() });
     }
   }
 
   private void UpdateGraphics() {
-    SpriteRenderer.sprite = DiceSprites[(int) GetFaceToward(OrentiationHelper, new Vector3(0, 0, -5)) - 1];
+    SpriteRenderer.sprite = DiceSprites[GetCurrentSide() - 1];
+  }
+
+  /// <summary>
+  /// Returns the side of the dice currently facing the camera
+  /// </summary>
+  public int GetCurrentSide() {
+    return (int) GetFaceToward(OrentiationHelper, new Vector3(0, 0, -5));
   }
 
   /// <summary>
@@ -76,7 +95,7 @@ public class DiceRoll : MonoBehaviour {
     Front  = 3  // 3
   }
 
-  public static CubeFace GetFaceToward(Transform cube, Vector3 observerPosition) {
+  public CubeFace GetFaceToward(Transform cube, Vector3 observerPosition) {
     var toObserver = cube.InverseTransformPoint(observerPosition);
 
     var absolute = new Vector3(
