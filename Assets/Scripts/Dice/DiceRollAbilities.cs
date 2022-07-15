@@ -18,7 +18,7 @@ public class DiceRollAbilities : MonoBehaviour {
     UpdateInput();
   }
 
-  private void UpdateInput() {
+  public void UpdateInput() {
     // Space Bar: KeyDown
     if (Input.GetKeyDown(KeyCode.Space)) {
       UseAbilityOnce(DiceRollMechanic.GetCurrentSide());
@@ -67,15 +67,15 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void Jetpack() {
-    // Debug.Log("Jetpack");
+    Debug.Log("Jetpack");
   }
 
   private void Dash() {
-    // Debug.Log("Dash");
+    Debug.Log("Dash");
   }
 
   private void Fire() {
-    // Debug.Log("Fire");
+    Debug.Log("Fire");
   }
   
 }
