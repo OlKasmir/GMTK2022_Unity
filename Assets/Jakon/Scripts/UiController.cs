@@ -8,14 +8,17 @@ public class UiController : MonoBehaviour
     public GameObject optionMenu;
     public GameObject mainMenu;
     public GameObject keybindMenu;
+    public GameObject gameOverMenu;
     // Start is called before the first frame update
     private void Start()
     {
         mainMenu = GameObject.Find("Canvas/Main Menu");
         optionMenu = GameObject.Find("Canvas/OptionsMenu");
         keybindMenu = GameObject.Find("Canvas/KeybindMenu");
+        gameOverMenu = GameObject.Find("Canvas/GameOver");
         optionMenu.SetActive(false);
         keybindMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
     }
     public void StartGame()
     {
@@ -42,6 +45,7 @@ public class UiController : MonoBehaviour
 
     public void Back()
     {
+        gameOverMenu.SetActive(false);
         keybindMenu.SetActive(false);
         optionMenu.SetActive(false);
         mainMenu.SetActive(true);
