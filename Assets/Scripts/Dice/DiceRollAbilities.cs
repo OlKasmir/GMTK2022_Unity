@@ -24,9 +24,9 @@ public class DiceRollAbilities : MonoBehaviour {
   /// </summary>
   AudioSource audioSourceJetpack;
   [Header("Jetpack")]
-  [SerializeField] 
+  [SerializeField]
   float speed = 1000;
-  [SerializeField] 
+  [SerializeField]
   AudioClip duesenSound;
   [SerializeField]
   private float _fuelMax = 100;
@@ -87,7 +87,7 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void OnValidate() {
-    if(_dashCooldown != null)
+    if (_dashCooldown != null)
       _dashCooldown.Change(_dashCooldownTime);
 
     if (_shootCooldown != null)
@@ -118,7 +118,7 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   public void UpdateFuel() {
-    if(RefuelCountdown.Check()) {
+    if (RefuelCountdown.Check()) {
       CurrentFuel = Mathf.Min(FuelMax, CurrentFuel + FuelMax * (Time.deltaTime / _refuelTime));
       FuelChange?.Invoke(this, new FuelChangeEventArgs() { currentFuel = CurrentFuel });
     }
@@ -136,6 +136,14 @@ public class DiceRollAbilities : MonoBehaviour {
     if (previousSide == 1) {
       audioSourceJetpack.Stop();
     }
+
+    if (previousSide == 2) {
+      StopStick();
+    }
+
+    if (newSide == 2) {
+      Stick();
+    }
   }
 
   /// <summary>
@@ -143,7 +151,7 @@ public class DiceRollAbilities : MonoBehaviour {
   /// </summary>
   /// <param name="diceSide">The side of the dice currently facing the camera</param>
   private void UseAbilityOnce(int diceSide) {
-    if (diceSide == 2 || diceSide == 5) {
+    if (diceSide == 5) {
       Dash();
     }
 
@@ -167,8 +175,8 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void Jetpack() {
-    if(CurrentFuel < 0) {
-      if(audioSourceJetpack.isPlaying) {
+    if (CurrentFuel < 0) {
+      if (audioSourceJetpack.isPlaying) {
         audioSourceJetpack.Stop();
       }
 
@@ -209,6 +217,52 @@ public class DiceRollAbilities : MonoBehaviour {
       Debug.LogWarning("Can't shoot projectile since the specified Projectile prefab doesn't have a projectile component on it");
       return;
     }
+  }
+
+
+  private GameObject _currentPlatform;
+  private float _previousGravity;
+  private bool _sticking = false;
+
+  private void OnCollisionEnter2D(Collision2D collision) {
+    if (collision.collider.tag == "Platform") {
+      _currentPlatform = collision.gameObject;
+    }
+
+    if (DiceRollMechanic.GetCurrentSide() == 2) {
+      Stick();
+    }
+  }
+
+  private void OnCollisionExit2D(Collision2D collision) {
+    if (collision.gameObject == _currentPlatform) {
+      _currentPlatform = null;
+    }
+  }
+
+  private void Stick() {
+    if (_sticking)
+      return;
+
+
+
+    if (_currentPlatform == null)
+      return;
+
+    _previousGravity = rb.gravityScale;
+    rb.gravityScale = 0.0f;
+    movement.ApplyMovementBlockTime(999.0f);
+    _sticking = true;
+  }
+
+  private void StopStick() {
+    if (!_sticking)
+      return;
+
+    rb.gravityScale = _previousGravity;
+    movement.ApplyMovementBlockTime(0.0f);
+
+    _sticking = false;
   }
 }
 

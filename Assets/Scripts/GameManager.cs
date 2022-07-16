@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour {
   [SerializeField, HideInInspector]
   private GameObject _finish;
 
+  private bool _loadingScene = false;
+
   void Init() {
     DontDestroyOnLoad(gameObject);
     
@@ -54,13 +56,20 @@ public class GameManager : MonoBehaviour {
   }
 
   public void FinishScene() {
+    if (_loadingScene)
+      return;
+
     if(_currentSceneCount >= _sceneNamesInOrder.Count) {
       FinishGame();
       return;
     }
 
-    LoadScene(_sceneNamesInOrder[_currentSceneCount]);
+    _loadingScene = true;
+    string sceneName = _sceneNamesInOrder[_currentSceneCount];
+    LoadScene(sceneName);
     _currentSceneCount++;
+
+    Debug.Log($"Now in Scene {sceneName}");
 
     StartCoroutine(InvokeDelayed(0.1f));
     // InitScene();
@@ -73,6 +82,9 @@ public class GameManager : MonoBehaviour {
   public IEnumerator InvokeDelayed(float delay) {
     yield return new WaitForSeconds(delay);
     InitScene();
+
+
+    _loadingScene = false;
   }
 
   public void InitScene() {
