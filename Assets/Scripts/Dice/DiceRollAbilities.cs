@@ -81,8 +81,16 @@ public class DiceRollAbilities : MonoBehaviour {
   /// </summary>
   [SerializeField, Header("Stomp")]
   private GameObject _prefabStompParticleSysten;
-  private bool _stomping = false;
+  [SerializeField]
+  private float _stompTimeUp;
+  [SerializeField]
+  private float _stompForceUp;
+  [SerializeField]
+  private float _stompTimeDown;
+  [SerializeField]
+  private float _stompForceDown;
 
+  private bool _stomping = false;
 
 
   public DiceRollMechanicSimple DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
@@ -336,14 +344,7 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
 
-  [SerializeField]
-  private float _stompTimeUp;
-  [SerializeField]
-  private float _stompForceUp;
-  [SerializeField]
-  private float _stompTimeDown;
-  [SerializeField]
-  private float _stompForceDown;
+
 
   private IEnumerator StompCoroutine() {
     rb.velocity = new Vector2(0.0f, rb.velocity.y);
