@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6637023718134966353}
   - component: {fileID: 58322498860152041}
   - component: {fileID: 58322498860152042}
-  - component: {fileID: 797016979374975608}
+  - component: {fileID: 806083228189732995}
   - component: {fileID: 6446776214040036066}
   - component: {fileID: 58322498860152043}
   - component: {fileID: 58322498860152036}
@@ -108,7 +108,7 @@ MonoBehaviour:
     m_Bits: 8
   speed: 5
   jumpForce: 10
---- !u!114 &797016979374975608
+--- !u!114 &806083228189732995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2190533828107879144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46349f93490f7044fbf0329e34b11eed, type: 3}
+  m_Script: {fileID: 11500000, guid: de38c8652229ee34caea8ab30e806a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
@@ -128,7 +128,8 @@ MonoBehaviour:
   - {fileID: -692459791, guid: 7ea36d43e4ded2d4c98285d1e31e22b6, type: 3}
   - {fileID: 887208170, guid: 7ea36d43e4ded2d4c98285d1e31e22b6, type: 3}
   - {fileID: -601830038, guid: 7ea36d43e4ded2d4c98285d1e31e22b6, type: 3}
-  _orientationHelper: {fileID: 0}
+  movement: {fileID: 0}
+  _currentSide: 1
 --- !u!114 &6446776214040036066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,8 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _diceRollMechanic: {fileID: 0}
-  speed: 50000
+  speed: 2500
   duesenSound: {fileID: 8300000, guid: 7cdd0c90e8567534a89fa538638487bc, type: 3}
+  _dashCooldownTime: 1
+  dashForce: 25
+  dashTime: 0.4
 --- !u!58 &58322498860152043
 CircleCollider2D:
   m_ObjectHideFlags: 0

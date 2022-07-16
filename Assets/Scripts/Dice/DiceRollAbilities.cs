@@ -2,23 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(DiceRollMechanic))]
+[RequireComponent(typeof(DiceRollMechanicSimple))]
 public class DiceRollAbilities : MonoBehaviour {
   [SerializeField, HideInInspector]
-  private DiceRollMechanic _diceRollMechanic;
+  private DiceRollMechanicSimple _diceRollMechanic;
 
+  PlayerMovement movement;
   Rigidbody2D rb;
   AudioSource audioSourceJetpack;
   [SerializeField] float speed = 1000;
   [SerializeField] AudioClip duesenSound;
 
-  public DiceRollMechanic DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
+  private Cooldown _dashCooldown;
+  [SerializeField]
+  private float _dashCooldownTime = 1.0f;
+  [SerializeField]
+  private float dashForce = 25;
+  [SerializeField, Tooltip("Time until the player can control the movement again")]
+  private float dashTime = 0.5f;
+
+  public DiceRollMechanicSimple DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
 
   private void Awake() {
-    _diceRollMechanic = GetComponent<DiceRollMechanic>();
+    _diceRollMechanic = GetComponent<DiceRollMechanicSimple>();
     DiceRollMechanic.DiceFaceChange += DiceRollMechanic_DiceFaceChange;
     rb = GetComponent<Rigidbody2D>();
     audioSourceJetpack = GetComponent<AudioSource>();
+    movement = GetComponent<PlayerMovement>();
+    _dashCooldown = new Cooldown(_dashCooldownTime);
+  }
+
+  private void OnValidate() {
+    if(_dashCooldown != null)
+      _dashCooldown.Change(_dashCooldownTime);
   }
 
   private void Update() {
@@ -85,7 +101,16 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void Dash() {
-    Debug.Log("Dash");
+    if (!_dashCooldown.Check())
+      return;
+
+    float xForce = 0.0f;
+    if (rb.velocity.x < 0) xForce = -1.0f;
+    if (rb.velocity.x > 0) xForce = 1.0f;
+
+    Vector2 dir = new Vector2(xForce, 0.0f);
+    rb.AddForce(dir * dashForce, ForceMode2D.Impulse);
+    movement.ApplyMovementBlockTime(dashTime);
   }
 
   private void Fire() {

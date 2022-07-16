@@ -24,6 +24,8 @@ public class DiceRollMechanic : MonoBehaviour {
   [SerializeField, HideInInspector, Tooltip("Transform to keep 3D Rotation information")]
   private Transform _orientationHelper;
 
+  PlayerMovement movement;
+
   public SpriteRenderer SpriteRenderer { get => _spriteRenderer; set => _spriteRenderer = value; }
   public List<Sprite> DiceSprites { get => _diceSprites; set => _diceSprites = value; }
   private Transform OrientationHelper { get => _orientationHelper; set => _orientationHelper = value; }
@@ -31,6 +33,7 @@ public class DiceRollMechanic : MonoBehaviour {
   private void Awake() {
     SpriteRenderer = GetComponent<SpriteRenderer>();
     _orientationHelper = new GameObject("OrientationHelper").GetComponent<Transform>();
+    movement = GetComponent<PlayerMovement>();
   }
 
   void Update() {
