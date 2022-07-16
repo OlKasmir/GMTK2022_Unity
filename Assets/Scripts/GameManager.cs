@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour {
   private List<GameObject> _keepOnSceneChange;
   [SerializeField, Tooltip("All Levels in the order supposed to be played")]
   private List<string> _sceneNamesInOrder;
+  [SerializeField]
+  private List<AudioClip> _musicTracks;
   [SerializeField, HideInInspector]
   private int _currentSceneCount = 0;
 
@@ -73,6 +75,8 @@ public class GameManager : MonoBehaviour {
 
     StartCoroutine(InvokeDelayed(0.1f));
     // InitScene();
+
+    AudioManager.Instance.PlaySound("LevelComplete");
   }
 
   public void FinishGame() {
@@ -92,6 +96,9 @@ public class GameManager : MonoBehaviour {
     _finish = GameObject.FindGameObjectWithTag("Finish");
 
     _player.transform.position = _spawn.transform.position;
+
+    if(_currentSceneCount - 1 < _musicTracks.Count)
+      AudioManager.Instance.PlayMusic(_musicTracks[_currentSceneCount - 1]);
   }
 
   public void LoadScene(string sceneName) {

@@ -156,7 +156,7 @@ MonoBehaviour:
   dashForce: 25
   dashTime: 0.4
   _projectilePrefab: {fileID: 5197915181660499221, guid: cdb90d3f232a44f45ad2ae2cce4924e3, type: 3}
-  _projectileForce: 50
+  _projectileForce: 1
   _shootCooldownTime: 0.5
 --- !u!58 &58322498860152043
 CircleCollider2D:

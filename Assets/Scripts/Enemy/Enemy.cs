@@ -10,6 +10,11 @@ public class Enemy : MonoBehaviour {
 
   [SerializeField, Header("Graphics")]
   private bool flipScale;
+  [SerializeField]
+  private GameObject _particleSystemDeath;
+
+  [SerializeField, Header("Sounds")]
+  private string _deathSound;
 
   [SerializeField, Header("Movement")]
   private bool _moveTowardsPlayer = false;
@@ -140,5 +145,30 @@ public class Enemy : MonoBehaviour {
       Debug.LogWarning("Can't shoot projectile since the specified Projectile prefab doesn't have a projectile component on it");
       return;
     }
+  }
+
+  public void Kill() {
+    if (string.IsNullOrEmpty(_deathSound))
+      AudioManager.Instance.PlaySound(_deathSound);
+
+    if(_particleSystemDeath != null) {
+      ParticleSystem ps = Instantiate(_particleSystemDeath, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+      BoxCollider2D box = GetComponent<BoxCollider2D>();
+
+      if (ps != null) {
+        ParticleSystem.ShapeModule shape = ps.shape;
+        if (shape.shapeType == ParticleSystemShapeType.Box && box != null) {
+          shape.scale = box.size;
+          ParticleSystem.EmissionModule em = ps.emission;
+          ParticleSystem.Burst burst = em.GetBurst(0);
+          burst.count = shape.scale.x * shape.scale.y * shape.scale.z;
+          
+        }
+      }
+
+      ps.Play();
+    }
+
+    Destroy(gameObject);
   }
 }
