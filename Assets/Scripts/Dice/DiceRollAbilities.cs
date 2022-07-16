@@ -211,6 +211,7 @@ public class DiceRollAbilities : MonoBehaviour {
     Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
     rb.AddForce(new Vector2(_projectileForce * GetDirection(), 0.0f), ForceMode2D.Impulse);
 
+    Physics2D.IgnoreCollision(go.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 
     Projectile p = go.GetComponent<Projectile>();
     if (p == null) {
