@@ -19,13 +19,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 10f;
-   
+    // [SerializeField] private float acceleration = 10;
+
+
+  private Countdown movementBlockTime;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+    movementBlockTime = new Countdown(0.0f);
     }
 
     private void Update()
@@ -45,27 +49,37 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementManager()
     {
-        float hDirection = Input.GetAxis("Horizontal");
+    
 
-        // Moving Left
-        if (hDirection < 0)
-        {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-            transform.localScale = new Vector2(-1, 1);
-        }
+        
+        
+            float hDirection = Input.GetAxis("Horizontal");
 
-        //Moving Right
-        else if (hDirection > 0)
-        {
-            rb.velocity = new Vector2(+speed, rb.velocity.y);
-            transform.localScale = new Vector2(1, 1);
-        }
+    if (movementBlockTime.Check()) {
+      // Moving Left
+      if (hDirection < 0) {
+        // rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(-speed, rb.velocity.y), Time.deltaTime * acceleration);
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
+        transform.localScale = new Vector2(-1, 1);
+      }
 
-        // Jumping
-        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
-        {
-            Jump();
-        }
+      //Moving Right
+      else if (hDirection > 0) {
+        // rb.velocity = Vector2.Lerp(rb.velocity, new Vector2(speed, rb.velocity.y), Time.deltaTime * acceleration);
+        rb.velocity = new Vector2(+speed, rb.velocity.y);
+        transform.localScale = new Vector2(1, 1);
+      }
+    }
+
+            // Jumping
+            if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
+            {
+                Jump();
+            }
+            // transform.localScale = new Vector2(-1, 1);
+        
+
+
     }
 
 
@@ -112,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+
+  public void ApplyMovementBlockTime(float seconds) {
+    movementBlockTime.Reset(seconds);
+  }
 
 
 
