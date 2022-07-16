@@ -18,7 +18,11 @@ public class DiceFuelPanel : MonoBehaviour {
   }
 
   private void Update() {
-    _fuelRechargeCountdownImage.fillAmount = Mathf.Clamp(_abilities.RefuelCountdown.TimeLeft / _abilities.RefuelCountdown.Duration, 0.0f, 1.0f);
+    if(_abilities.CurrentFuel >= _abilities.FuelMax) {
+      _fuelRechargeCountdownImage.fillAmount = 0.0f;
+    } else {
+      _fuelRechargeCountdownImage.fillAmount = Mathf.Clamp(_abilities.RefuelCountdown.TimeLeft / _abilities.RefuelCountdown.Duration, 0.0f, 1.0f);
+    }
   }
 
   private void _abilities_FuelChange(object sender, FuelChangeEventArgs eventArgs) {

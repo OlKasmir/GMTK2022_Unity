@@ -18,6 +18,10 @@ public class DiceRollAbilities : MonoBehaviour {
   PlayerMovement movement;
   Rigidbody2D rb;
 
+
+  /// <summary>
+  /// JETPACK
+  /// </summary>
   AudioSource audioSourceJetpack;
   [Header("Jetpack")]
   [SerializeField] 
@@ -36,6 +40,10 @@ public class DiceRollAbilities : MonoBehaviour {
   // private bool refueling = false;
   private float _currentFuel;
 
+
+  /// <summary>
+  /// DASH
+  /// </summary>
   [SerializeField, HideInInspector]
   private Cooldown _dashCooldown;
   [Header("Dash")]
@@ -45,6 +53,21 @@ public class DiceRollAbilities : MonoBehaviour {
   private float dashForce = 25;
   [SerializeField, Tooltip("Time until the player can control the movement again")]
   private float dashTime = 0.5f;
+
+
+
+  /// <summary>
+  /// FIRE
+  /// </summary>
+  [SerializeField, Header("Shoot")]
+  private GameObject _projectilePrefab;
+  [SerializeField]
+  private float _projectileForce;
+  [SerializeField]
+  private float _shootCooldownTime;
+  private Cooldown _shootCooldown;
+
+
 
   public DiceRollMechanicSimple DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
   public float FuelMax { get => _fuelMax; set => _fuelMax = value; }
@@ -60,11 +83,18 @@ public class DiceRollAbilities : MonoBehaviour {
     _dashCooldown = new Cooldown(_dashCooldownTime);
     RefuelCountdown = new Countdown(_refuelDelay);
     CurrentFuel = FuelMax;
+    _shootCooldown = new Cooldown(_shootCooldownTime);
   }
 
   private void OnValidate() {
     if(_dashCooldown != null)
       _dashCooldown.Change(_dashCooldownTime);
+
+    if (_shootCooldown != null)
+      _shootCooldown.Change(_shootCooldownTime);
+
+    if (_refuelCountdown != null)
+      _refuelCountdown.Reset(_refuelDelay);
   }
 
   private void Update() {
@@ -103,7 +133,7 @@ public class DiceRollAbilities : MonoBehaviour {
     // The side of the dice facing the camera now
     int newSide = eventArgs.newSide;
 
-    if (previousSide == 1 || previousSide == 6) {
+    if (previousSide == 1) {
       audioSourceJetpack.Stop();
     }
   }
@@ -117,7 +147,7 @@ public class DiceRollAbilities : MonoBehaviour {
       Dash();
     }
 
-    if (diceSide == 3 || diceSide == 4) {
+    if (diceSide == 3) {
       Fire();
     }
   }
@@ -127,9 +157,13 @@ public class DiceRollAbilities : MonoBehaviour {
   /// </summary>
   /// <param name="diceSide">The side of the dice currently facing the camera</param>
   private void UsingAbility(int diceSide) {
-    if (diceSide == 1 || diceSide == 6) {
+    if (diceSide == 1) {
       Jetpack();
     }
+  }
+
+  public float GetDirection() {
+    return transform.localScale.x < 0 ? -1.0f : 1.0f; // rb.velocity.x < 0 ? -1.0f : 1.0f;
   }
 
   private void Jetpack() {
@@ -155,18 +189,26 @@ public class DiceRollAbilities : MonoBehaviour {
     if (!_dashCooldown.Check())
       return;
 
-    float xForce = 0.0f;
-    if (rb.velocity.x < 0) xForce = -1.0f;
-    if (rb.velocity.x > 0) xForce = 1.0f;
-
-    Vector2 dir = new Vector2(xForce, 0.0f);
+    Vector2 dir = new Vector2(GetDirection(), 0.0f);
     rb.AddForce(dir * dashForce, ForceMode2D.Impulse);
     movement.ApplyMovementBlockTime(dashTime);
   }
 
   private void Fire() {
-    Debug.Log("Fire");
-  }
+    if (!_shootCooldown.Check()) {
+      return;
+    }
 
+    GameObject go = Instantiate(_projectilePrefab, transform.position + new Vector3(GetDirection() * 1.0f, 0.0f), Quaternion.identity);
+    Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
+    rb.AddForce(new Vector2(_projectileForce * GetDirection(), 0.0f), ForceMode2D.Impulse);
+
+
+    Projectile p = go.GetComponent<Projectile>();
+    if (p == null) {
+      Debug.LogWarning("Can't shoot projectile since the specified Projectile prefab doesn't have a projectile component on it");
+      return;
+    }
+  }
 }
 
