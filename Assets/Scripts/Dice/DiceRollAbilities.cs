@@ -68,6 +68,22 @@ public class DiceRollAbilities : MonoBehaviour {
   private Cooldown _shootCooldown;
 
 
+  /// <summary>
+  /// STICK
+  /// </summary>
+  private GameObject _currentPlatform;
+  private float _previousGravity;
+  private bool _sticking = false;
+
+
+  /// <summary>
+  /// STOMP
+  /// </summary>
+  [SerializeField, Header("Stomp")]
+  private GameObject _prefabStompParticleSysten;
+  private bool _stomping = false;
+
+
 
   public DiceRollMechanicSimple DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
   public float FuelMax { get => _fuelMax; set => _fuelMax = value; }
@@ -145,6 +161,14 @@ public class DiceRollAbilities : MonoBehaviour {
       Stick();
     }
 
+    if (previousSide == 6) {
+      StopBlock();
+    }
+
+    if (newSide == 6) {
+      StartBlock();
+    }
+
     AudioManager.Instance.PlaySound("SwitchModes");
   }
 
@@ -159,6 +183,10 @@ public class DiceRollAbilities : MonoBehaviour {
 
     if (diceSide == 3) {
       Fire();
+    }
+
+    if (diceSide == 4) {
+      Stomp();
     }
   }
 
@@ -224,21 +252,39 @@ public class DiceRollAbilities : MonoBehaviour {
     }
     p.Owner = gameObject;
 
-    AudioManager.Instance.PlaySound("Gun1");
+    AudioManager.Instance.PlaySound("Gun*");
   }
 
 
-  private GameObject _currentPlatform;
-  private float _previousGravity;
-  private bool _sticking = false;
 
   private void OnCollisionEnter2D(Collision2D collision) {
     if (collision.collider.tag == "Platform") {
       _currentPlatform = collision.gameObject;
+
+      //_stomping = false;
+      //StopAllCoroutines();
     }
+
 
     if (DiceRollMechanic.GetCurrentSide() == 2) {
       Stick();
+    }
+
+    // Stomp hitting enemy
+    if (DiceRollMechanic.GetCurrentSide() == 4) {
+      if (collision.collider.tag == "Enemy") {
+        collision.gameObject.GetComponent<Enemy>().Kill();
+      }
+
+      if (collision.collider.tag == "Platform") { //  || collision.collider.tag == "Untagged"
+        _stomping = false;
+        StopAllCoroutines();
+        AudioManager.Instance.PlaySound("Stomp*");
+        if(_prefabStompParticleSysten != null) {
+          Instantiate(_prefabStompParticleSysten, transform.position + new Vector3(0.0f, -0.5f), _prefabStompParticleSysten.transform.rotation);
+        }
+        movement.ApplyMovementBlockTime(0.0f);
+      }
     }
   }
 
@@ -271,6 +317,55 @@ public class DiceRollAbilities : MonoBehaviour {
     movement.ApplyMovementBlockTime(0.0f);
 
     _sticking = false;
+  }
+
+  private void StartBlock() {
+
+  }
+
+  private void StopBlock() {
+
+  }
+
+  private void Stomp() {
+    if (_stomping)
+      return;
+
+    _stomping = true;
+    StartCoroutine(StompCoroutine());
+  }
+
+
+  [SerializeField]
+  private float _stompTimeUp;
+  [SerializeField]
+  private float _stompForceUp;
+  [SerializeField]
+  private float _stompTimeDown;
+  [SerializeField]
+  private float _stompForceDown;
+
+  private IEnumerator StompCoroutine() {
+    rb.velocity = new Vector2(0.0f, rb.velocity.y);
+    movement.ApplyMovementBlockTime(_stompTimeUp + _stompTimeDown);
+
+    rb.AddForce(new Vector2(0.0f, _stompForceUp), ForceMode2D.Impulse);
+    yield return new WaitForSeconds(_stompTimeUp);
+
+    rb.AddForce(new Vector2(0.0f, -_stompForceDown), ForceMode2D.Impulse);
+    yield return new WaitForSeconds(_stompTimeDown);
+
+    //Countdown count = new Countdown(_stompTimeUp);
+    //while(!count.Check()) {
+    //  yield return new WaitForFixedUpdate();
+    //}
+
+    //count.Reset(_stompTimeDown);
+    //while (!count.Check()) {
+    //  yield return new WaitForFixedUpdate();
+    //}
+
+    _stomping = false;
   }
 }
 
