@@ -1,19 +1,44 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class FuelChangeEventArgs : EventArgs {
+  public float currentFuel;
+}
+
 [RequireComponent(typeof(DiceRollMechanicSimple))]
 public class DiceRollAbilities : MonoBehaviour {
+  public delegate void FuelChangeEventHandler(object sender, FuelChangeEventArgs eventArgs);
+  public event FuelChangeEventHandler FuelChange;
+
   [SerializeField, HideInInspector]
   private DiceRollMechanicSimple _diceRollMechanic;
 
   PlayerMovement movement;
   Rigidbody2D rb;
-  AudioSource audioSourceJetpack;
-  [SerializeField] float speed = 1000;
-  [SerializeField] AudioClip duesenSound;
 
+  AudioSource audioSourceJetpack;
+  [Header("Jetpack")]
+  [SerializeField] 
+  float speed = 1000;
+  [SerializeField] 
+  AudioClip duesenSound;
+  [SerializeField]
+  private float _fuelMax = 100;
+  [SerializeField]
+  private float _fuelTime = 2.0f;
+  [SerializeField]
+  private float _refuelDelay = 2.0f;
+  [SerializeField]
+  private float _refuelTime = 0.5f;
+  private Countdown _refuelCountdown;
+  // private bool refueling = false;
+  private float _currentFuel;
+
+  [SerializeField, HideInInspector]
   private Cooldown _dashCooldown;
+  [Header("Dash")]
   [SerializeField]
   private float _dashCooldownTime = 1.0f;
   [SerializeField]
@@ -22,6 +47,9 @@ public class DiceRollAbilities : MonoBehaviour {
   private float dashTime = 0.5f;
 
   public DiceRollMechanicSimple DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
+  public float FuelMax { get => _fuelMax; set => _fuelMax = value; }
+  public float CurrentFuel { get => _currentFuel; set => _currentFuel = value; }
+  public Countdown RefuelCountdown { get => _refuelCountdown; set => _refuelCountdown = value; }
 
   private void Awake() {
     _diceRollMechanic = GetComponent<DiceRollMechanicSimple>();
@@ -30,6 +58,8 @@ public class DiceRollAbilities : MonoBehaviour {
     audioSourceJetpack = GetComponent<AudioSource>();
     movement = GetComponent<PlayerMovement>();
     _dashCooldown = new Cooldown(_dashCooldownTime);
+    RefuelCountdown = new Countdown(_refuelDelay);
+    CurrentFuel = FuelMax;
   }
 
   private void OnValidate() {
@@ -39,6 +69,8 @@ public class DiceRollAbilities : MonoBehaviour {
 
   private void Update() {
     UpdateInput();
+
+    UpdateFuel();
   }
 
   public void UpdateInput() {
@@ -52,6 +84,13 @@ public class DiceRollAbilities : MonoBehaviour {
       UsingAbility(DiceRollMechanic.GetCurrentSide());
     } else {
       audioSourceJetpack.Stop();
+    }
+  }
+
+  public void UpdateFuel() {
+    if(RefuelCountdown.Check()) {
+      CurrentFuel = Mathf.Min(FuelMax, CurrentFuel + FuelMax * (Time.deltaTime / _refuelTime));
+      FuelChange?.Invoke(this, new FuelChangeEventArgs() { currentFuel = CurrentFuel });
     }
   }
 
@@ -94,6 +133,18 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void Jetpack() {
+    if(CurrentFuel < 0) {
+      if(audioSourceJetpack.isPlaying) {
+        audioSourceJetpack.Stop();
+      }
+
+      return;
+    }
+
+    CurrentFuel -= FuelMax * (Time.deltaTime / _fuelTime);
+    FuelChange?.Invoke(this, new FuelChangeEventArgs() { currentFuel = CurrentFuel });
+    RefuelCountdown.Reset();
+
     rb.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
     if (!audioSourceJetpack.isPlaying) {
       audioSourceJetpack.PlayOneShot(duesenSound);
@@ -118,3 +169,4 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
 }
+

@@ -12,20 +12,6 @@ public class DiceUnfoldPanel : MonoBehaviour {
   [SerializeField]
   private List<Vector2> _diceSideHighlightPositions;
 
-  [SerializeField]
-  private Vector2 positionDice1;
-  [SerializeField]
-  private Vector2 positionDice2;
-  [SerializeField]
-  private Vector2 positionDice3;
-  [SerializeField]
-  private Vector2 positionDice4;
-  [SerializeField]
-  private Vector2 positionDice5;
-  [SerializeField]
-  private Vector2 positionDice6;
-
-
   public void Start() {
     _mech.DiceFaceChange += _mech_DiceFaceChange;
   }
