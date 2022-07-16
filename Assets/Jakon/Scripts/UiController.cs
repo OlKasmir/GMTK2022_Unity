@@ -5,14 +5,26 @@ using UnityEngine;
 public class UiController : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    public void StartGame()
     {
-        
+        Debug.Log("Input First Game Scene here");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowBindings()
     {
-        
+        Debug.Log("Input Keybind Scene here");
+    }
+
+    public void Options()
+    {
+        Debug.Log("Input Option Scene here");
+    }
+    public void End()
+    {
+        //Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
+
+
+
