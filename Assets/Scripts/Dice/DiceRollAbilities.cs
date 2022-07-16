@@ -144,6 +144,8 @@ public class DiceRollAbilities : MonoBehaviour {
     if (newSide == 2) {
       Stick();
     }
+
+    AudioManager.Instance.PlaySound("SwitchModes");
   }
 
   /// <summary>
@@ -189,7 +191,7 @@ public class DiceRollAbilities : MonoBehaviour {
 
     rb.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
     if (!audioSourceJetpack.isPlaying) {
-      audioSourceJetpack.PlayOneShot(duesenSound);
+      audioSourceJetpack = AudioManager.Instance.PlaySound(duesenSound, transform.position); //audioSourceJetpack.PlayOneShot(duesenSound);
     }
   }
 
@@ -200,6 +202,8 @@ public class DiceRollAbilities : MonoBehaviour {
     Vector2 dir = new Vector2(GetDirection(), 0.0f);
     rb.AddForce(dir * dashForce, ForceMode2D.Impulse);
     movement.ApplyMovementBlockTime(dashTime);
+
+    AudioManager.Instance.PlaySound("Dash2");
   }
 
   private void Fire() {
@@ -218,6 +222,9 @@ public class DiceRollAbilities : MonoBehaviour {
       Debug.LogWarning("Can't shoot projectile since the specified Projectile prefab doesn't have a projectile component on it");
       return;
     }
+    p.Owner = gameObject;
+
+    AudioManager.Instance.PlaySound("Gun1");
   }
 
 

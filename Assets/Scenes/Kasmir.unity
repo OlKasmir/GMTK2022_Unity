@@ -264,6 +264,7 @@ MonoBehaviour:
   - {fileID: 1298452068}
   - {fileID: 1246396562}
   _sceneNamesInOrder: []
+  _musicTracks: []
   _currentSceneCount: 0
   _player: {fileID: 1720285549038366816}
   _spawn: {fileID: 0}

@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 2257819850932717420}
   m_Layer: 7
   m_Name: EnemyCard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,6 +238,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   sr: {fileID: 0}
   flipScale: 1
+  _particleSystemDeath: {fileID: 5664874782648696988, guid: 96309ca83852b44449c7b9a4a1c65e7e, type: 3}
+  _deathSound: CardDeath*
   _moveTowardsPlayer: 0
   _movementSpeed: 5
   _acceleration: 5

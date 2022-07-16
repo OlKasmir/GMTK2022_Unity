@@ -213,9 +213,9 @@ public class AudioManager : MonoBehaviour {
   /// </summary>
   /// <param name="soundName">Sound* will play a random sound containing Sound in front (Regex)</param>
   /// <param name="forcePlay">If true the sound will play instantly (Not queuing if enabled)</param>
-  public void PlaySound(string soundName, bool forcePlay = false, float volumeScale = 1f) {
+  public AudioSource PlaySound(string soundName, bool forcePlay = false, float volumeScale = 1f) {
     if (soundName == null || soundName == "")
-      return;
+      return null;
 
     //if(!forcePlay && soundQueueEnabled) {
     //  soundQueue.AddUnique(soundName);
@@ -233,7 +233,7 @@ public class AudioManager : MonoBehaviour {
         // Too close to last time played
         if (currentTime < timeLastPlayed + _timeBetweenSameSound) {
           // Don't play Sound
-          return;
+          return null;
 
         // Set last time played to current time and continue
         } else {
@@ -274,13 +274,14 @@ public class AudioManager : MonoBehaviour {
     }
 
     if (clips.Count > 0) {
-      PlaySound(clips, volumeScale: volumeScale);
+      return PlaySound(clips, volumeScale: volumeScale);
     } else {
       Debug.Log("No sound found for name: " + soundName);
+      return null;
     }
   }
 
-  public void PlaySound(AudioClip audioClip, Vector3 position, bool attached = false, GameObject obj = null, float volumeScale = 1.0f) {
+  public AudioSource PlaySound(AudioClip audioClip, Vector3 position, bool attached = false, GameObject obj = null, float volumeScale = 1.0f) {
     // position.z = -1f; Tried to get 3D sound to work but it was kinda buggy
 
     //AudioSource source;
@@ -293,7 +294,7 @@ public class AudioManager : MonoBehaviour {
     GameObject soundObj = SoundPool.Fetch();
     if(soundObj == null) {
       Debug.LogWarning("Couldn't create Sound. SoundPool was full");
-      return;
+      return null;
     }
 
     soundObj.transform.position = position;
@@ -344,24 +345,26 @@ public class AudioManager : MonoBehaviour {
 
     // source.PlayOneShot(audioClip, volumeScale);
     // Destroy(source.gameObject, source.clip.length);
+
+    return source;
   }
 
-  public void PlaySound(AudioClip[] audioClips, Vector3 position = default, bool attached = false, GameObject obj = null, float volumeScale = 1.0f) {
+  public AudioSource PlaySound(AudioClip[] audioClips, Vector3 position = default, bool attached = false, GameObject obj = null, float volumeScale = 1.0f) {
     if (audioClips == null || audioClips.Length == 0) {
       Debug.Log("Can't play random clip from array. Array doesn't exist or is empty!");
-      return;
+      return null;
     }
 
-    PlaySound(audioClips[UnityEngine.Random.Range(0, audioClips.Length)], position, attached, obj, volumeScale);
+    return PlaySound(audioClips[UnityEngine.Random.Range(0, audioClips.Length)], position, attached, obj, volumeScale);
   }
 
-  public void PlaySound(List<AudioClip> audioClips, Vector3 position = default, bool attached = false, GameObject obj = null, float volumeScale = 1.0f) {
+  public AudioSource PlaySound(List<AudioClip> audioClips, Vector3 position = default, bool attached = false, GameObject obj = null, float volumeScale = 1.0f) {
     if (audioClips == null || audioClips.Count == 0) {
       Debug.Log("Can't play random clip from list. List doesn't exist or is empty!");
-      return;
+      return null;
     }
 
-    PlaySound(audioClips[UnityEngine.Random.Range(0, audioClips.Count)], position, attached, obj, volumeScale);
+    return PlaySound(audioClips[UnityEngine.Random.Range(0, audioClips.Count)], position, attached, obj, volumeScale);
   }
   #endregion
 }
