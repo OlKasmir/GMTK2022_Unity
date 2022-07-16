@@ -11,8 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
 
     //FSM State Maschine
-    private enum State { idle, running, jumping, falling, hurt }
-    private State state = State.idle;
+  
+    // private enum State { idle, running, extra, falling, hurt }
+   //private State state = State.idle;
     private Collider2D coll;
 
     // Inspector Variables
@@ -27,20 +28,22 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+       // anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
     movementBlockTime = new Countdown(0.0f);
     }
 
     private void Update()
     {
-        if (state != State.hurt)
+        MovementManager();
+        
+        // if (state != State.hurt)
         {
-            MovementManager();
+           // MovementManager();
         }
 
-        AnimationState();
-        anim.SetInteger("state", (int)state); //sets Animation based on Enumerator state
+       // AnimationState();
+       // anim.SetInteger("state", (int)state); //sets Animation based on Enumerator state
     }
 
    
@@ -86,11 +89,12 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        state = State.jumping;
+       // state = State.extra;
     }
-    private void AnimationState()
+   
+    /* private void AnimationState()
     {
-        if (state == State.jumping)
+        if (state == State.extra)
         {
             if (rb.velocity.y < .1f)
             {
@@ -127,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-  public void ApplyMovementBlockTime(float seconds) {
+ */ public void ApplyMovementBlockTime(float seconds) {
     movementBlockTime.Reset(seconds);
   }
 
