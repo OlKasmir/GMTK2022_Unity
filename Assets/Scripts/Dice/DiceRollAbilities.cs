@@ -6,12 +6,18 @@ using UnityEngine;
 public class DiceRollAbilities : MonoBehaviour {
   [SerializeField, HideInInspector]
   private DiceRollMechanic _diceRollMechanic;
+    Rigidbody2D rb;
+    AudioSource audioSourceJetpack;
+    [SerializeField, HideInInspector] float speed = 1000;
+    [SerializeField] AudioClip duesenSound;
 
-  public DiceRollMechanic DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
+    public DiceRollMechanic DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
 
   private void Awake() {
     _diceRollMechanic = GetComponent<DiceRollMechanic>();
     DiceRollMechanic.DiceFaceChange += DiceRollMechanic_DiceFaceChange;
+        rb = GetComponent<Rigidbody2D>();
+        audioSourceJetpack = GetComponent<AudioSource>();
   }
 
   private void Update() {
@@ -27,7 +33,11 @@ public class DiceRollAbilities : MonoBehaviour {
     // Space Bar: Pressed
     if(Input.GetKey(KeyCode.Space)) {
       UsingAbility(DiceRollMechanic.GetCurrentSide());
-    }
+        }
+        else
+        {
+            audioSourceJetpack.Stop();
+        }
   }
 
   /// <summary>
@@ -67,8 +77,12 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void Jetpack() {
-    Debug.Log("Jetpack");
-  }
+        rb.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
+        if (!audioSourceJetpack.isPlaying)
+        {
+            audioSourceJetpack.PlayOneShot(duesenSound);
+        }
+    }
 
   private void Dash() {
     Debug.Log("Dash");
