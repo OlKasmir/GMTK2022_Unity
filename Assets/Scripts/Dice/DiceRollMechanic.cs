@@ -81,19 +81,19 @@ public class DiceRollMechanic : MonoBehaviour {
   /// Returns the side of the dice currently facing the camera
   /// </summary>
   public int GetCurrentSide() {
-    return (int)GetFaceToward(OrientationHelper, new Vector3(transform.position.x, transform.position.y, -5));
+    return (int)GetFaceToward(OrientationHelper, new Vector3(0, 0, -5));
   }
 
   /// <summary>
   /// https://gamedev.stackexchange.com/questions/187075/how-to-tell-which-face-of-a-cube-is-most-visible-to-the-camera
   /// </summary>
   public enum CubeFace {
-    Left = 2, // 2
+    Left = 2,   // 2
     Bottom = 6, // 6
-    Back = 4, // 4
-    Right = 5, // 5
-    Top = 1, // 1
-    Front = 3  // 3
+    Back = 4,   // 4
+    Right = 5,  // 5
+    Top = 1,    // 1
+    Front = 3   // 3
   }
 
   public CubeFace GetFaceToward(Transform cube, Vector3 observerPosition) {

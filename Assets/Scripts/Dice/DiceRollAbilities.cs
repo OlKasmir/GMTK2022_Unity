@@ -6,18 +6,19 @@ using UnityEngine;
 public class DiceRollAbilities : MonoBehaviour {
   [SerializeField, HideInInspector]
   private DiceRollMechanic _diceRollMechanic;
-    Rigidbody2D rb;
-    AudioSource audioSourceJetpack;
-    [SerializeField, HideInInspector] float speed = 1000;
-    [SerializeField] AudioClip duesenSound;
 
-    public DiceRollMechanic DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
+  Rigidbody2D rb;
+  AudioSource audioSourceJetpack;
+  [SerializeField] float speed = 1000;
+  [SerializeField] AudioClip duesenSound;
+
+  public DiceRollMechanic DiceRollMechanic { get => _diceRollMechanic; set => _diceRollMechanic = value; }
 
   private void Awake() {
     _diceRollMechanic = GetComponent<DiceRollMechanic>();
     DiceRollMechanic.DiceFaceChange += DiceRollMechanic_DiceFaceChange;
-        rb = GetComponent<Rigidbody2D>();
-        audioSourceJetpack = GetComponent<AudioSource>();
+    rb = GetComponent<Rigidbody2D>();
+    audioSourceJetpack = GetComponent<AudioSource>();
   }
 
   private void Update() {
@@ -31,13 +32,11 @@ public class DiceRollAbilities : MonoBehaviour {
     }
 
     // Space Bar: Pressed
-    if(Input.GetKey(KeyCode.Space)) {
+    if (Input.GetKey(KeyCode.Space)) {
       UsingAbility(DiceRollMechanic.GetCurrentSide());
-        }
-        else
-        {
-            audioSourceJetpack.Stop();
-        }
+    } else {
+      audioSourceJetpack.Stop();
+    }
   }
 
   /// <summary>
@@ -49,7 +48,9 @@ public class DiceRollAbilities : MonoBehaviour {
     // The side of the dice facing the camera now
     int newSide = eventArgs.newSide;
 
-    
+    if (previousSide == 1 || previousSide == 6) {
+      audioSourceJetpack.Stop();
+    }
   }
 
   /// <summary>
@@ -71,18 +72,17 @@ public class DiceRollAbilities : MonoBehaviour {
   /// </summary>
   /// <param name="diceSide">The side of the dice currently facing the camera</param>
   private void UsingAbility(int diceSide) {
-    if(diceSide == 1 || diceSide == 6) {
+    if (diceSide == 1 || diceSide == 6) {
       Jetpack();
     }
   }
 
   private void Jetpack() {
-        rb.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
-        if (!audioSourceJetpack.isPlaying)
-        {
-            audioSourceJetpack.PlayOneShot(duesenSound);
-        }
+    rb.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
+    if (!audioSourceJetpack.isPlaying) {
+      audioSourceJetpack.PlayOneShot(duesenSound);
     }
+  }
 
   private void Dash() {
     Debug.Log("Dash");
@@ -91,5 +91,5 @@ public class DiceRollAbilities : MonoBehaviour {
   private void Fire() {
     Debug.Log("Fire");
   }
-  
+
 }
