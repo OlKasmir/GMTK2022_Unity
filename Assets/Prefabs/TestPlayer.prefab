@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -692459791, guid: 7ea36d43e4ded2d4c98285d1e31e22b6, type: 3}
+  m_Sprite: {fileID: -966588774, guid: 7ea36d43e4ded2d4c98285d1e31e22b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -145,9 +145,19 @@ MonoBehaviour:
   _diceRollMechanic: {fileID: 0}
   speed: 2500
   duesenSound: {fileID: 8300000, guid: 7cdd0c90e8567534a89fa538638487bc, type: 3}
+  _fuelMax: 100
+  _fuelTime: 2
+  _refuelDelay: 2
+  _refuelTime: 0.5
+  _dashCooldown:
+    _startTime: 0
+    _cooldown: 1
   _dashCooldownTime: 1
   dashForce: 25
   dashTime: 0.4
+  _projectilePrefab: {fileID: 5197915181660499221, guid: cdb90d3f232a44f45ad2ae2cce4924e3, type: 3}
+  _projectileForce: 50
+  _shootCooldownTime: 0.5
 --- !u!58 &58322498860152043
 CircleCollider2D:
   m_ObjectHideFlags: 0

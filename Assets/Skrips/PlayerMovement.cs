@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 Jump();
             }
-            transform.localScale = new Vector2(-1, 1);
+            // transform.localScale = new Vector2(-1, 1);
         
 
 
