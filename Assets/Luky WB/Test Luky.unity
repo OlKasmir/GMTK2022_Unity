@@ -134,6 +134,34 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 58322498860152041, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb6afe133f1e45a4fad77633ea473907, type: 3}
+    - target: {fileID: 58322498860152043, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: m_Radius
+      value: 0.62897456
+      objectReference: {fileID: 0}
+    - target: {fileID: 58322498860152043, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0047768354
+      objectReference: {fileID: 0}
+    - target: {fileID: 806083228189732995, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: _diceSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 202b96df101e5024f8e143fbb144c520, type: 3}
+    - target: {fileID: 806083228189732995, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: _diceSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cf7f543ce1d1aba4eaf3be50680da94a, type: 3}
+    - target: {fileID: 806083228189732995, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: _diceSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 114aff6d58a706f4691f89302de78beb, type: 3}
+    - target: {fileID: 806083228189732995, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
+      propertyPath: _diceSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: bb6afe133f1e45a4fad77633ea473907, type: 3}
     - target: {fileID: 2190533828107879144, guid: 94fd83b495223cb4fa9ff8fe4cbb4792, type: 3}
       propertyPath: m_Name
       value: TestPlayer
