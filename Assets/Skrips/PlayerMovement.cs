@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
             // Jumping
-            if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
+            if (Input.GetKeyDown(KeyCode.W) && coll.IsTouchingLayers(ground))
             {
                 Jump();
             }
