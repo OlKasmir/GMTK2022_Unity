@@ -7,8 +7,13 @@ public class Projectile : MonoBehaviour {
 
   public GameObject Owner { get => _owner; set => _owner = value; }
 
-
   private Countdown countdownDestroy;
+
+
+  public int _maxBounces = 0;
+  public string _bounceSound;
+
+
   private void Awake() {
     countdownDestroy = new Countdown(5.0f);
   }
@@ -37,7 +42,14 @@ public class Projectile : MonoBehaviour {
 
     }
 
-    Destroy(gameObject);
+    if(_maxBounces > 0) {
+      _maxBounces--;
+      if(!string.IsNullOrEmpty(_bounceSound)) {
+        AudioManager.Instance.PlaySound(_bounceSound);
+      }
+    } else {
+      Destroy(gameObject);
+    }
   }
 
   private void DamagePlayer() {

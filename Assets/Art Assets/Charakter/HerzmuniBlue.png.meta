@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6c842777e9e47b488b1d4e32b48593c
+guid: 26734aed7b7dca44c9238739c9f6bdbd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlueKarts_0
+      name: HerzmuniBlue_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 5
-        width: 32
-        height: 78
+        x: 3
+        y: 36
+        width: 9
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d40de3abfa4eae44bed38a5e04af89e
-      internalID: 1107764388
+      spriteID: 33eaae081b3dff3479fea485f6055345
+      internalID: 609911370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_1
+      name: HerzmuniBlue_1
       rect:
         serializedVersion: 2
-        x: 182
-        y: 5
-        width: 32
-        height: 78
+        x: 18
+        y: 36
+        width: 10
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a35e47178826d24ca4effa1629c77e1
-      internalID: 1037190807
+      spriteID: e6d3803d1795b4047b289cc96b97e1f5
+      internalID: 443069098
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_2
+      name: HerzmuniBlue_2
       rect:
         serializedVersion: 2
-        x: 335
-        y: 5
-        width: 32
-        height: 78
+        x: 35
+        y: 36
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ef8f022646b75941b3005b8db333d24
-      internalID: 39834606
+      spriteID: f282fcf7bde11594881b99b01b9c044b
+      internalID: -581428063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_3
+      name: HerzmuniBlue_3
       rect:
         serializedVersion: 2
-        x: 488
-        y: 5
-        width: 32
-        height: 78
+        x: 2
+        y: 19
+        width: 11
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a6ca76f8f36524482562234079bd35
-      internalID: 1205648133
+      spriteID: d854c08308f157f47a312db48e8f5ff0
+      internalID: 1003230562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_4
+      name: HerzmuniBlue_4
       rect:
         serializedVersion: 2
-        x: 641
-        y: 5
-        width: 32
-        height: 78
+        x: 20
+        y: 20
+        width: 7
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c09c0fb7bbbf4f045ab3b582343184ef
-      internalID: -1983988731
+      spriteID: 91343a8e39223bb43a4e9aac93d249b1
+      internalID: 2001897824
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_5
+      name: HerzmuniBlue_5
       rect:
         serializedVersion: 2
-        x: 794
-        y: 5
-        width: 32
-        height: 78
+        x: 35
+        y: 20
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09150326a3b56884a9406db39c93fe34
-      internalID: -1928501679
+      spriteID: 654471ba9f9763842ab3ee91db90914a
+      internalID: 1918592696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_6
+      name: HerzmuniBlue_6
       rect:
         serializedVersion: 2
-        x: 947
+        x: 4
         y: 5
-        width: 32
-        height: 78
+        width: 8
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -256,20 +256,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22e8ee8459aa7d144ab984c960b36638
-      internalID: 103636509
+      spriteID: d93477f34ee8e054d9332c95feb758d2
+      internalID: -1542918533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_7
+      name: HerzmuniBlue_7
       rect:
         serializedVersion: 2
-        x: 1100
-        y: 5
-        width: 32
-        height: 78
+        x: 22
+        y: 6
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,20 +277,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 086c405552d3b6a4ea84d3dd94a2012a
-      internalID: -2135241526
+      spriteID: 9648eaa2174c53641b1758cf6abfdaa4
+      internalID: -1343106169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BlueKarts_8
+      name: HerzmuniBlue_8
       rect:
         serializedVersion: 2
-        x: 1253
-        y: 5
-        width: 32
-        height: 78
+        x: 37
+        y: 6
+        width: 7
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,92 +298,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4231e733b8e7edc449719db176bb041f
-      internalID: 1433560060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueKarts_9
-      rect:
-        serializedVersion: 2
-        x: 1406
-        y: 5
-        width: 32
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2d6afd79af52964f8a28205caa4eeeb
-      internalID: -1410863903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueKarts_10
-      rect:
-        serializedVersion: 2
-        x: 1559
-        y: 5
-        width: 32
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aa6dc586d2f0e94192c2c3e3aa8a900
-      internalID: 548340401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueKarts_11
-      rect:
-        serializedVersion: 2
-        x: 1712
-        y: 5
-        width: 32
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08f768de01837da43bb1383760cb8276
-      internalID: -191113471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BlueKarts_12
-      rect:
-        serializedVersion: 2
-        x: 1865
-        y: 5
-        width: 32
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9a6f1c2d95c4d640a194954a6b0ee28
-      internalID: -1075527592
+      spriteID: 08045033f7fd5aa4c9e27392e0c3639d
+      internalID: 968139949
       vertices: []
       indices: 
       edges: []
@@ -399,19 +315,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BlueKarts_0: 1107764388
-      BlueKarts_3: 1205648133
-      BlueKarts_9: -1410863903
-      BlueKarts_10: 548340401
-      BlueKarts_5: -1928501679
-      BlueKarts_7: -2135241526
-      BlueKarts_8: 1433560060
-      BlueKarts_6: 103636509
-      BlueKarts_2: 39834606
-      BlueKarts_12: -1075527592
-      BlueKarts_4: -1983988731
-      BlueKarts_11: -191113471
-      BlueKarts_1: 1037190807
+      HerzmuniBlue_4: 2001897824
+      HerzmuniBlue_8: 968139949
+      HerzmuniBlue_5: 1918592696
+      HerzmuniBlue_6: -1542918533
+      HerzmuniBlue_3: 1003230562
+      HerzmuniBlue_0: 609911370
+      HerzmuniBlue_7: -1343106169
+      HerzmuniBlue_1: 443069098
+      HerzmuniBlue_2: -581428063
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
