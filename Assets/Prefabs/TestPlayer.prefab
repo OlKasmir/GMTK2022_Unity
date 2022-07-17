@@ -144,11 +144,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _diceRollMechanic: {fileID: 0}
-  speed: 2500
+  speed: 2000
   duesenSound: {fileID: 8300000, guid: 7cdd0c90e8567534a89fa538638487bc, type: 3}
   _fuelMax: 100
-  _fuelTime: 2
-  _refuelDelay: 2
+  _fuelTime: 1.8
+  _refuelDelay: 1.5
   _refuelTime: 0.5
   _dashCooldown:
     _startTime: 0
@@ -179,7 +179,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.62
 --- !u!50 &58322498860152036
 Rigidbody2D:
   serializedVersion: 4
@@ -199,7 +199,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 15b616cc0ad665a4b92b178340f0de1b, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &58322498860152047
 Animator:

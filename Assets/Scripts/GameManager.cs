@@ -80,8 +80,10 @@ public class GameManager : MonoBehaviour {
   }
 
   public void FinishGame() {
-    if (gameObject.transform.parent != null)
+    if (gameObject.transform.parent != null) {
+      Player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
       return;
+    }
 
     foreach(GameObject go in _keepOnSceneChange) {
       SceneManager.MoveGameObjectToScene(go, SceneManager.GetActiveScene());
