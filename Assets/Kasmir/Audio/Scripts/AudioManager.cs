@@ -118,7 +118,7 @@ public class AudioManager : MonoBehaviour {
 
     if (PlayerPrefs.HasKey("Volume")) {
       float volume = PlayerPrefs.GetFloat("Volume");
-      audioMixer.SetFloat("MasterVolume", volume);
+      audioMixer.SetFloat("MasterVolume", Mathf.Log(volume) * 20);
     }
   }
 

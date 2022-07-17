@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour {
   private List<AudioClip> _musicTracks;
   [SerializeField, HideInInspector]
   private int _currentSceneCount = 0;
+  [SerializeField]
+  private AudioClip _deathMusic;
 
   [SerializeField]
   private GameObject _player;
@@ -235,6 +237,7 @@ public class GameManager : MonoBehaviour {
       canvasGroupGameOver.blocksRaycasts = true;
       canvasGroupGameOver.interactable = true;
       Player.GetComponent<PlayerMovement>().ApplyMovementBlockTime(1000);
+      AudioManager.Instance.PlayMusic(_deathMusic);
 
     } else {
       Respawn();

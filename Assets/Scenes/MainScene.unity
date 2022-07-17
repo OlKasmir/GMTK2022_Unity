@@ -1277,6 +1277,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 43dd27161709a3f44859caf0f7b98879, type: 3}
   - {fileID: 8300000, guid: 15c27d3bbea95f54db5a885f8b45cc7a, type: 3}
   _currentSceneCount: 0
+  _deathMusic: {fileID: 8300000, guid: 2a94d231d2c37e34a83875be4e2a5f22, type: 3}
   _player: {fileID: 1720285549038366816}
   _spawn: {fileID: 0}
   _finish: {fileID: 0}
