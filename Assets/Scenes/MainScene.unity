@@ -649,6 +649,10 @@ MonoBehaviour:
   - {fileID: 1246396562}
   _sceneNamesInOrder:
   - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
   _musicTracks:
   - {fileID: 8300000, guid: bce5627920315f143a7762acf42a134a, type: 3}
   - {fileID: 8300000, guid: 43dd27161709a3f44859caf0f7b98879, type: 3}
