@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour {
   #endregion
 
   [SerializeField]
+  private CanvasGroup canvasGroupGameOver;
+
+  [SerializeField]
   private List<GameObject> _keepOnSceneChange;
   [SerializeField, Tooltip("All Levels in the order supposed to be played")]
   private List<string> _sceneNamesInOrder;
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour {
     FinishScene();
   }
 
-  public void FinishScene() {
+  public void FinishScene(bool uncompleted = false) {
     if (_loadingScene)
       return;
 
@@ -68,22 +71,19 @@ public class GameManager : MonoBehaviour {
       return;
     }
 
-    _loadingScene = true;
-    string sceneName = _sceneNamesInOrder[_currentSceneCount];
-    LoadScene(sceneName);
-    _currentSceneCount++;
+    if (gameObject.transform.parent != null) {
 
-    Debug.Log($"Now in Scene {sceneName}");
-
-    StartCoroutine(InvokeDelayed(0.1f));
-    // InitScene();
-
-    AudioManager.Instance.PlaySound("LevelComplete");
+    } else {
+      _loadingScene = true;
+      string sceneName = _sceneNamesInOrder[_currentSceneCount];
+      StartCoroutine(LoadNextSceneAsync(sceneName, uncompleted));
+    }
   }
 
   public void FinishGame() {
     if (gameObject.transform.parent != null) {
       Player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+      UpdateMapConfiner();
       return;
     }
 
@@ -95,6 +95,53 @@ public class GameManager : MonoBehaviour {
     //SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
 
     StartCoroutine(LoadStartSceneAsync());
+  }
+
+  public void Respawn() {
+    _currentSceneCount--;
+    canvasGroupGameOver.alpha = 0.0f;
+    canvasGroupGameOver.blocksRaycasts = false;
+    canvasGroupGameOver.interactable = false;
+
+    FinishScene(true);
+
+    
+  }
+
+  public void MainMenu() {
+    StartCoroutine(LoadStartSceneAsyncMainMenu());
+  }
+
+  public IEnumerator LoadNextSceneAsync(string sceneName, bool uncompleted = false) {
+    AsyncOperation async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+
+    while (!async.isDone) {
+      yield return null;
+    }
+
+    _currentSceneCount++;
+    Debug.Log($"Now in Scene {sceneName}");
+
+    InitScene();
+
+
+    _loadingScene = false;
+
+    //StartCoroutine(InvokeDelayed(0.1f));
+    // InitScene();
+
+    if (!uncompleted)
+      AudioManager.Instance.PlaySound("LevelComplete");
+  }
+
+  public IEnumerator LoadStartSceneAsyncMainMenu() {
+    AsyncOperation async = SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Single);
+
+    while (!async.isDone) {
+      yield return null;
+    }
+
+    Destroy(gameObject);
   }
 
   public IEnumerator LoadStartSceneAsync() {
@@ -110,22 +157,64 @@ public class GameManager : MonoBehaviour {
     Destroy(gameObject);
   }
 
-  public IEnumerator InvokeDelayed(float delay) {
-    yield return new WaitForSeconds(delay);
-    InitScene();
+  //public IEnumerator InvokeDelayed(float delay) {
+  //  yield return new WaitForSeconds(delay);
+  //  InitScene();
 
 
-    _loadingScene = false;
-  }
+  //  _loadingScene = false;
+  //}
 
   public void InitScene() {
     Spawn  = GameObject.FindGameObjectWithTag("Respawn");
     Finish = GameObject.FindGameObjectWithTag("Finish");
 
+    UpdateMapConfiner();
+
+
+
+
+    Camera.main.gameObject.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().enabled = false;
+    Camera.main.transform.position = Spawn.transform.position;
     _player.transform.position = Spawn.transform.position;
+    Camera.main.gameObject.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().enabled = true;
+
+    StartCoroutine(ToSpawnDelayed());
 
     if(_currentSceneCount - 1 < _musicTracks.Count)
       AudioManager.Instance.PlayMusic(_musicTracks[_currentSceneCount - 1]);
+  }
+
+  public IEnumerator ToSpawnDelayed() {
+    yield return new WaitForSeconds(0.1f);
+
+    Camera.main.gameObject.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().enabled = false;
+    Camera.main.transform.position = Spawn.transform.position;
+    _player.transform.position = Spawn.transform.position;
+    Camera.main.gameObject.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().enabled = true;
+  }
+
+  public void UpdateMapConfiner() {
+    GameObject mapConfiner = GameObject.FindGameObjectWithTag("CameraBounds");
+    if (mapConfiner != null) {
+      Collider2D mapConfinerCollider = mapConfiner.GetComponent<Collider2D>();
+
+      if (mapConfinerCollider != null) {
+        Cinemachine.CinemachineConfiner2D confiner = Camera.main.GetComponentInChildren<Cinemachine.CinemachineConfiner2D>();
+        if (confiner != null) {
+          confiner.m_BoundingShape2D = mapConfinerCollider;
+        } else {
+          Debug.LogWarning("No Confiner Extension found on Camera");
+        }
+      } else {
+        Debug.LogWarning("No Collider on Camera Bounds!");
+      }
+
+
+
+    } else {
+      Debug.LogWarning("No Camera Bounds found");
+    }
   }
 
   public void LoadScene(string sceneName) {
@@ -133,6 +222,14 @@ public class GameManager : MonoBehaviour {
   }
 
   public void GameOver() {
+    AudioManager.Instance.PlaySound("PlayerDeath");
 
+    if (gameObject.transform.parent == null) {
+      canvasGroupGameOver.alpha = 1.0f;
+      canvasGroupGameOver.blocksRaycasts = true;
+      canvasGroupGameOver.interactable = true;
+    } else {
+      Respawn();
+    }
   }
 }

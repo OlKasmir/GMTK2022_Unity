@@ -19,6 +19,11 @@ public class Duck : MonoBehaviour {
   void Awake() {
     enemy = GetComponent<Enemy>();
     enemy.AutoEndAnim = false;
+    enemy.OnDeath += Enemy_OnDeath;
+  }
+
+  private void Enemy_OnDeath() {
+    Explode();
   }
 
   // Update is called once per frame
@@ -27,10 +32,12 @@ public class Duck : MonoBehaviour {
       enemy.StartAttackAnimation();
       StartCoroutine(DuckSounds());
       _triggered = true;
-    } else {
+
+    } else if(_triggered && !enemy.IsPlayerInSight()) {
 
       StopAllCoroutines();
       _triggered = false;
+      _exploding = false;
     }
 
     if(enemy.GetPlayerDistance() <= explosionDistance) {
@@ -71,8 +78,8 @@ public class Duck : MonoBehaviour {
     if(fuse != null)
       fuse.Stop();
 
-    if (enemy.GetPlayerDistance() <= 2) {
-      Debug.Log("TODO: Player should have taken damage OR blocked when on side 6");
+    if (enemy.GetPlayerDistance() <= 2 && GameManager.Instance.Player.GetComponent<DiceRollMechanicSimple>().GetCurrentSide() != 6) {
+      GameManager.Instance.GameOver();
     }
 
     Destroy(gameObject);

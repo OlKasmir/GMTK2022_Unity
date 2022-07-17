@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Enemy
   - Death
+  - CameraBounds
   layers:
   - Default
   - TransparentFX
