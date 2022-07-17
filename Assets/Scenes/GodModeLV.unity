@@ -827,6 +827,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2358350965020493696, guid: ed34881c37dc339459956f7cfb980761, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358350965020493696, guid: ed34881c37dc339459956f7cfb980761, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358350965020493696, guid: ed34881c37dc339459956f7cfb980761, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5805954863115624990, guid: ed34881c37dc339459956f7cfb980761, type: 3}
       propertyPath: m_Name
       value: SceneTestKit
@@ -874,6 +886,18 @@ PrefabInstance:
     - target: {fileID: 7856782734612161229, guid: ed34881c37dc339459956f7cfb980761, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357418243882519929, guid: ed34881c37dc339459956f7cfb980761, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357418243882519929, guid: ed34881c37dc339459956f7cfb980761, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357418243882519929, guid: ed34881c37dc339459956f7cfb980761, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed34881c37dc339459956f7cfb980761, type: 3}
@@ -7466,18 +7490,6 @@ Tilemap:
     m_Data: {fileID: 1198243337, guid: b5d3ce0f507f01e40a798e2a8f864a90, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -2109456348, guid: b5d3ce0f507f01e40a798e2a8f864a90, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 223
     m_Data:
@@ -22332,11 +22344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9069327664682135437, guid: a85506049bb8d344aae305589f033b58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.66
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9069327664682135437, guid: a85506049bb8d344aae305589f033b58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.74
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 9069327664682135437, guid: a85506049bb8d344aae305589f033b58, type: 3}
       propertyPath: m_LocalPosition.z
