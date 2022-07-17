@@ -235,6 +235,8 @@ public class DiceRollAbilities : MonoBehaviour {
     if (!_dashCooldown.Check())
       return;
 
+
+    rb.velocity = Vector2.zero;
     Vector2 dir = new Vector2(GetDirection(), 0.0f);
     rb.AddForce(dir * dashForce, ForceMode2D.Impulse);
     movement.ApplyMovementBlockTime(dashTime);
@@ -314,6 +316,7 @@ public class DiceRollAbilities : MonoBehaviour {
     _previousGravity = rb.gravityScale;
     rb.gravityScale = 0.0f;
     movement.ApplyMovementBlockTime(999.0f);
+    rb.constraints = RigidbodyConstraints2D.FreezeAll;
     _sticking = true;
   }
 
@@ -323,6 +326,7 @@ public class DiceRollAbilities : MonoBehaviour {
 
     rb.gravityScale = _previousGravity;
     movement.ApplyMovementBlockTime(0.0f);
+    rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
     _sticking = false;
   }

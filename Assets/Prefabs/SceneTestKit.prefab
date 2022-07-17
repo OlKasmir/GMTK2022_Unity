@@ -103,7 +103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9017149dab699e4987f67fcebb64681, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dfb1c5ee4869cf44c8e77e36f049f01c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1198,11 +1198,11 @@ PrefabInstance:
       objectReference: {fileID: 2199963877192553736}
     - target: {fileID: 8500970594038595666, guid: 2989a9a7df9d0764aa646df10f5a4660, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 2.126923
+      value: 1.5583942
       objectReference: {fileID: 0}
     - target: {fileID: 8500970594038595666, guid: 2989a9a7df9d0764aa646df10f5a4660, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8500970594038595667, guid: 2989a9a7df9d0764aa646df10f5a4660, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1214,7 +1214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8500970594704964514, guid: 2989a9a7df9d0764aa646df10f5a4660, type: 3}
       propertyPath: orthographic size
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8500970594530327119, guid: 2989a9a7df9d0764aa646df10f5a4660, type: 3}

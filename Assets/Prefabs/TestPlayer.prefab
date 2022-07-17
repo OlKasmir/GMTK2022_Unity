@@ -107,8 +107,10 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 8
-  speed: 5
+  speed: 8
   jumpForce: 10
+  _maxHangTime: 0.1
+  _jumpBufferTime: 0.1
 --- !u!114 &806083228189732995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +156,8 @@ MonoBehaviour:
     _startTime: 0
     _cooldown: 1
   _dashCooldownTime: 1
-  dashForce: 25
-  dashTime: 0.4
+  dashForce: 40
+  dashTime: 0.5
   _projectilePrefab: {fileID: 5197915181660499221, guid: cdb90d3f232a44f45ad2ae2cce4924e3, type: 3}
   _projectileForce: 1
   _shootCooldownTime: 0.5
@@ -196,7 +198,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1.5
-  m_Material: {fileID: 6200000, guid: 15b616cc0ad665a4b92b178340f0de1b, type: 2}
+  m_Material: {fileID: 6200000, guid: 2550d1d26b5c1b44dbc0e3058cdca73d, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
