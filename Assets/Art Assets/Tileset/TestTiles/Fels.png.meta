@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6dda865a10600db4b93bab6cb6943f80
+guid: 361c24e832db3324a8d6eb0118ebdeea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,11 +116,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wasser_0
+      name: Fels_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 240
+        x: 128
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -130,18 +130,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12978bb9a6478424a995582654e3192f
-      internalID: -1517870776
+      spriteID: a527525e39d113f468b4853ab32db0b2
+      internalID: -1669375692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_1
+      name: Fels_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 240
+        x: 144
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -151,207 +151,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1344c71e9663c3a429b993a88d7c37f9
-      internalID: 452044998
+      spriteID: 133e315cb61892f4d81dfd0aeee6f84c
+      internalID: -1317798503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_2
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0731a17a4d0d1ad4aa3dc7e4759852c1
-      internalID: 1636953073
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_3
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 240
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 238b3d956a23bec448374f1dcd793a69
-      internalID: -1306386812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_4
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 912f9631d13fee64494fc0e03972b529
-      internalID: 487691247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_5
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: baa87a2af8cb6d645915afc8991c8080
-      internalID: -1030929624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_6
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25b6248888159d24f80195d828a5da33
-      internalID: -1201609677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_7
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 224
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14b2cd67b84b54b4fabbecde12917e51
-      internalID: -1927068148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_8
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b17a917c8d257943b586e51c86292f8
-      internalID: -378982393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_9
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf3241706710c73439bbe0b058b737ee
-      internalID: 937462888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_10
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 699c11c1afe0bca47aeac17d2457aab8
-      internalID: 1563841749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_11
+      name: Fels_2
       rect:
         serializedVersion: 2
         x: 160
-        y: 208
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -361,18 +172,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 774b7dbbc7388b7408195287b5b82efe
-      internalID: -1093847596
+      spriteID: ff4c50c1a85db1e47947b8ef7e210089
+      internalID: 483276525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_12
+      name: Fels_3
       rect:
         serializedVersion: 2
-        x: 176
-        y: 208
+        x: 192
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -382,18 +193,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 659422daa4cc21340be134e3eae37201
-      internalID: -8421238
+      spriteID: 624050046a0ed4b438a060357c448e79
+      internalID: -353377944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_13
+      name: Fels_4
       rect:
         serializedVersion: 2
         x: 208
-        y: 208
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -403,18 +214,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf1384ec4b5aa240b769b3d49852a44
-      internalID: 498963963
+      spriteID: 15d1832a8950b2b40807291517ac079a
+      internalID: 1466527932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_14
+      name: Fels_5
       rect:
         serializedVersion: 2
         x: 224
-        y: 208
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -424,18 +235,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4514e27ae2393814c841bad2f80c462d
-      internalID: -1466194535
+      spriteID: 22f28ec0a8a37ec4e994d3bbe23b07f3
+      internalID: -1211977672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_15
+      name: Fels_6
       rect:
         serializedVersion: 2
-        x: 288
-        y: 208
+        x: 240
+        y: 97
         width: 16
         height: 16
       alignment: 0
@@ -445,60 +256,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e73d99a7cea25aa489b5be9d737fb863
-      internalID: 956133605
+      spriteID: 50554b4a72ea3054db880cd7ba487d54
+      internalID: 1145820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_16
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 208
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 612437cec7491c944829b196785b9cd8
-      internalID: -1402463775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_17
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5dee3abe8660adb4cac9da68af768d84
-      internalID: 2085219919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_18
+      name: Fels_7
       rect:
         serializedVersion: 2
         x: 32
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -508,18 +277,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b10e45a6064e5c345aba8939032d74f9
-      internalID: 1258580142
+      spriteID: 3bf9a2a19d7dbe343af8222024a329e2
+      internalID: 448343443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_19
+      name: Fels_8
       rect:
         serializedVersion: 2
         x: 48
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -529,18 +298,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b0f1a95a24667746a361d6b9e425654
-      internalID: -34214087
+      spriteID: 44eeb9a9675bb71479f8a17c750faaa8
+      internalID: -1280381698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_20
+      name: Fels_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534b557aefcd6f3408bf97cbc137fe52
+      internalID: -2199493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_10
       rect:
         serializedVersion: 2
         x: 80
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -550,18 +340,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe33e958a8e2da74ca37f9f1b1851f2f
-      internalID: 1910232446
+      spriteID: bffb807fad6d5a5429a2fcdcf03a1c2f
+      internalID: 269086616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_21
+      name: Fels_11
       rect:
         serializedVersion: 2
         x: 96
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -571,18 +361,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abcbc9b90d2868641bb43740f2895491
-      internalID: -1233145440
+      spriteID: 1859b72e045df374fa55c027fe596f85
+      internalID: -146320159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_22
+      name: Fels_12
       rect:
         serializedVersion: 2
         x: 112
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -592,18 +382,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ee8069c0c057b84cbb94b87c5c3ab8e
-      internalID: -754916712
+      spriteID: 9ecf5a87853d0dc4a8f6f975249bfdcd
+      internalID: 1714748549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_23
+      name: Fels_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60aa8bc052749f745b52a32bc3baebaf
+      internalID: 1086690478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf62b9e11f2eeb541bd1858fc58c32bb
+      internalID: -1952849068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_15
       rect:
         serializedVersion: 2
         x: 160
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -613,18 +445,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32e826116a3387844a4123b1909bd676
-      internalID: -218642116
+      spriteID: eb08da3a79f6cf041b445f85a4907fa0
+      internalID: 1346494614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_24
+      name: Fels_16
       rect:
         serializedVersion: 2
         x: 176
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -634,18 +466,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 864404f3f0a4e8047a9ecffc40bc16a1
-      internalID: -268443512
+      spriteID: 38097be9166b8514d988812833460de3
+      internalID: 558748228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_25
+      name: Fels_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 81
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ae34d150821b3488d4afdeab5e64a2
+      internalID: -1326463343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_18
       rect:
         serializedVersion: 2
         x: 208
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -655,18 +508,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 805ef96533911d8449e1283468420577
-      internalID: 7314953
+      spriteID: 90742124a7b43b449be57e85b1135747
+      internalID: -1610244567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_26
+      name: Fels_19
       rect:
         serializedVersion: 2
         x: 224
-        y: 192
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -676,18 +529,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 396fa6c37f7ace54688054db8c384456
-      internalID: 2101911046
+      spriteID: 53ea2c9201cc44b43afb31f913d8ad54
+      internalID: -643139321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_27
+      name: Fels_20
       rect:
         serializedVersion: 2
-        x: 272
-        y: 192
+        x: 240
+        y: 81
         width: 16
         height: 16
       alignment: 0
@@ -697,123 +550,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 938f6e5e3c648fb42ac3b3cc742022d1
-      internalID: 1576919323
+      spriteID: aa4509aa1b7d54843a675f4fe9cbdd2e
+      internalID: 498763610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_28
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4885657ee2d70e94794dc2444a1174a5
-      internalID: 1078908837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_29
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7303a1eaa200c4f4b8a8d63edf4a4408
-      internalID: -686589613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_30
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48616f6c1cb1bb5419831bbf2b2c66b1
-      internalID: -277946414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_31
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69c4a42755fa1094bbdb22467c5aca6e
-      internalID: -1416588765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_32
-      rect:
-        serializedVersion: 2
-        x: 368
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 511c5d27448ea0045b75b65fe4eae0a1
-      internalID: -1043717158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wasser_33
+      name: Fels_21
       rect:
         serializedVersion: 2
         x: 16
-        y: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -823,18 +571,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2542ee94121674e4fa866acec17a65a3
-      internalID: 1868261436
+      spriteID: 58ddef3a0e361654da70136cf78474ec
+      internalID: 1976453759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_34
+      name: Fels_22
       rect:
         serializedVersion: 2
         x: 32
-        y: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -844,18 +592,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 752a4f34c38c368439b1b18a41b489ce
-      internalID: -2085544564
+      spriteID: 5f4a66e92eee0d1428af1c4277aee90b
+      internalID: -521830010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_35
+      name: Fels_23
       rect:
         serializedVersion: 2
         x: 48
-        y: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -865,18 +613,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7b7412be009f3649812056ad3becc02
-      internalID: 1101801072
+      spriteID: cc7d9a0bd4cdb654c8a67815ddaedc75
+      internalID: -552717888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_36
+      name: Fels_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514686f65c588f34eb51fbf5b9021435
+      internalID: -551336663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_25
       rect:
         serializedVersion: 2
         x: 80
-        y: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -886,18 +655,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81703e9408d8de144b47df881a1c3832
-      internalID: 758101597
+      spriteID: f25215445ffd1d84e813d5425dcd3de8
+      internalID: -1949441915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_37
+      name: Fels_26
       rect:
         serializedVersion: 2
         x: 96
-        y: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -907,18 +676,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cb74fd550c588d4186b7ebd89a005ab
-      internalID: 482797989
+      spriteID: 0f0ec70ceea7d4b4c8ff2f1c52b5a613
+      internalID: -663417497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_38
+      name: Fels_27
       rect:
         serializedVersion: 2
         x: 112
-        y: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -928,18 +697,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c12a72a91ee72ff46ade0b158f96e3f6
-      internalID: -1960430917
+      spriteID: b557442fea195604bb750d2869810ffb
+      internalID: -1116850792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_39
+      name: Fels_28
       rect:
         serializedVersion: 2
-        x: 272
-        y: 176
+        x: 128
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -949,18 +718,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a4dc72d9116e684c93393c93312c7d8
-      internalID: 622259307
+      spriteID: 7b26ad215029cb44493368e11e0f1f7b
+      internalID: -138968165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_40
+      name: Fels_29
       rect:
         serializedVersion: 2
-        x: 288
-        y: 176
+        x: 144
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -970,18 +739,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b8ed3bb3a654ab4b9a99652ba229ae9
-      internalID: -324442979
+      spriteID: 5058178bb7db98245852f55117071d77
+      internalID: 1345016698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_41
+      name: Fels_30
       rect:
         serializedVersion: 2
-        x: 304
-        y: 176
+        x: 160
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -991,18 +760,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c44768c124aa749a22fb7ac5733f83
-      internalID: -746151971
+      spriteID: 4ca6dc03d797f3548be1fa031d036f30
+      internalID: 2121983800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_42
+      name: Fels_31
       rect:
         serializedVersion: 2
-        x: 320
-        y: 176
+        x: 176
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -1012,18 +781,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee39ce71f2e34464b8e648a78039d892
-      internalID: -582485474
+      spriteID: e2730e31b057e654bbde8ea9be2162e6
+      internalID: -1344101007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_43
+      name: Fels_32
       rect:
         serializedVersion: 2
-        x: 336
-        y: 176
+        x: 192
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -1033,18 +802,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5c6b063431548b45bab25be94848e6d
-      internalID: -1737449217
+      spriteID: 01b69d1a7dbe3734ebb028cc870f1dec
+      internalID: -444967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_44
+      name: Fels_33
       rect:
         serializedVersion: 2
-        x: 352
-        y: 176
+        x: 208
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -1054,18 +823,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f38431a5af16f2f4aa15f7e11f87eb47
-      internalID: 1998112354
+      spriteID: 50efe07e780174946a384e0a3688223a
+      internalID: -121486229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_45
+      name: Fels_34
       rect:
         serializedVersion: 2
-        x: 368
-        y: 176
+        x: 224
+        y: 65
         width: 16
         height: 16
       alignment: 0
@@ -1075,18 +844,123 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfcce7bb1d127046af423241e8ee207
-      internalID: -2002328138
+      spriteID: c932d75fb5fe81d409d491eb1e69765a
+      internalID: -587609346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_46
+      name: Fels_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 65
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039a79b60f474c84c9aeb722fc743f34
+      internalID: 747305379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1d037f2ddbc744db98432a0e579760
+      internalID: 319989942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_37
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3d210c5df7bb345b28fefbd82bc657
+      internalID: -131029874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_38
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdf26ca075e144418a4476075823975
+      internalID: -2077888071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_39
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7119493311d4b945a48c7ba55497a00
+      internalID: -237284719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_40
       rect:
         serializedVersion: 2
         x: 80
-        y: 160
+        y: 49
         width: 16
         height: 16
       alignment: 0
@@ -1096,18 +970,102 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4fb0f416f84c96428bc1cd978949bac
-      internalID: 1110790362
+      spriteID: 1329a94adefb7b64683913adf0120feb
+      internalID: 1519999825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_47
+      name: Fels_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae5cbe7ea76e2342a7dc5ac940b5fe8
+      internalID: 466824627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_42
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee94a0c050523724cbce96d040a45975
+      internalID: -904034101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b44a5d457c01274c9de34686ec622e3
+      internalID: 1223661486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 49
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207f725d8cd601345905675ac5431147
+      internalID: -1184531985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_45
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 49
         width: 16
         height: 16
       alignment: 0
@@ -1117,18 +1075,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4be939cac4849724b84e08f5451883b7
-      internalID: -35041997
+      spriteID: 0795e193b8a819747855e5edd5427d33
+      internalID: -1270445371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_48
+      name: Fels_46
       rect:
         serializedVersion: 2
-        x: 176
-        y: 160
+        x: 192
+        y: 49
         width: 16
         height: 16
       alignment: 0
@@ -1138,18 +1096,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0125d6d7a58903c4d81804f2e2d41d3b
-      internalID: -648740883
+      spriteID: 15c9b0a86f2d6994497a7b82b8e34e43
+      internalID: 726883124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_49
+      name: Fels_47
       rect:
         serializedVersion: 2
         x: 208
-        y: 160
+        y: 49
         width: 16
         height: 16
       alignment: 0
@@ -1159,18 +1117,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0e33726eacba2d438c399ced7d471f5
-      internalID: 1059595819
+      spriteID: 8c72c3a2b29cf404db5bda2108fd3dd8
+      internalID: -298523950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_50
+      name: Fels_48
       rect:
         serializedVersion: 2
         x: 224
-        y: 160
+        y: 49
         width: 16
         height: 16
       alignment: 0
@@ -1180,18 +1138,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3d205344edd1047a6dfceec86733dd
-      internalID: 1517829403
+      spriteID: d0aacece768ae5d45a2c5827e212a991
+      internalID: -481448551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_51
+      name: Fels_49
       rect:
         serializedVersion: 2
-        x: 336
-        y: 160
+        x: 32
+        y: 33
         width: 16
         height: 16
       alignment: 0
@@ -1201,18 +1159,123 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57fe583cc8e6d554194d510df968b49e
-      internalID: 274540215
+      spriteID: 465127a9d248b804f813991fc17ff5b2
+      internalID: -499027714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_52
+      name: Fels_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f786438f7c48aa346842b0bd335d80da
+      internalID: 1377269129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_51
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ed29cd383e05e47a72e89a7dd189fb
+      internalID: 302982260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_52
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb91b5113aed5f84db528a0301e622a8
+      internalID: -707498163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_53
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e776cccc78c6af4a8886e56079c5409
+      internalID: 487461072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_54
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38e6c0bcbb4f0f49ae4087e75559c9c
+      internalID: -650493407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_55
       rect:
         serializedVersion: 2
         x: 160
-        y: 144
+        y: 33
         width: 16
         height: 16
       alignment: 0
@@ -1222,18 +1285,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 776cab206e6e2474e9d15f7aac6368e9
-      internalID: -474146591
+      spriteID: 52abd200bbefab0469f3859d0a69c343
+      internalID: -1921208812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_53
+      name: Fels_56
       rect:
         serializedVersion: 2
         x: 176
-        y: 144
+        y: 33
         width: 16
         height: 16
       alignment: 0
@@ -1243,18 +1306,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0715276cf4a1d224ab79048d58e9c583
-      internalID: -544912080
+      spriteID: c4e44a663138608458eb111df15e26ab
+      internalID: -137134127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_54
+      name: Fels_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384e84268351b524fb142c569ba86a57
+      internalID: 1230580485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_58
       rect:
         serializedVersion: 2
         x: 208
-        y: 144
+        y: 33
         width: 16
         height: 16
       alignment: 0
@@ -1264,18 +1348,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8f490a849b133a409b989256e05f664
-      internalID: -1987062939
+      spriteID: fbdde9fe35fe661428138fa7c5e98390
+      internalID: 938526886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wasser_55
+      name: Fels_59
       rect:
         serializedVersion: 2
         x: 224
-        y: 144
+        y: 33
         width: 16
         height: 16
       alignment: 0
@@ -1285,8 +1369,197 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec6422c07f7ad5d45ac47b61fdd36ca8
-      internalID: 1119424343
+      spriteID: 7f65c86bba880934abbb0b334a41bbad
+      internalID: 250391670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_60
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 33
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c83a30209a12d4489ed6612df0faea
+      internalID: 1078231104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_61
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a743457cebdc14d9eb8020ddf5b4e2
+      internalID: 1179917440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392add8896dc5334e983eb890f69e6d5
+      internalID: 210866760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_63
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4249513ad73be849863c00e9df925e5
+      internalID: -763133857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133317262f8ad6e4d8c215fa93c12519
+      internalID: -434918321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d0921914b8c75459ac37913d6adc15
+      internalID: -474329794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_66
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab87f11279be5a479d5c0b64d104c39
+      internalID: -2003613261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_67
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e450aeecb2f3f74492fb1e345b9d625
+      internalID: -539960489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fels_68
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 17
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3207b612af780d841ac3900a37708031
+      internalID: 1011414059
       vertices: []
       indices: 
       edges: []
@@ -1302,62 +1575,75 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wasser_5: -1030929624
-      Wasser_43: -1737449217
-      Wasser_9: 937462888
-      Wasser_29: -686589613
-      Wasser_30: -277946414
-      Wasser_41: -746151971
-      Wasser_50: 1517829403
-      Wasser_32: -1043717158
-      Wasser_36: 758101597
-      Wasser_44: 1998112354
-      Wasser_17: 2085219919
-      Wasser_39: 622259307
-      Wasser_46: 1110790362
-      Wasser_47: -35041997
-      Wasser_16: -1402463775
-      Wasser_14: -1466194535
-      Wasser_8: -378982393
-      Wasser_40: -324442979
-      Wasser_45: -2002328138
-      Wasser_49: 1059595819
-      Wasser_1: 452044998
-      Wasser_22: -754916712
-      Wasser_54: -1987062939
-      Wasser_53: -544912080
-      Wasser_10: 1563841749
-      Wasser_20: 1910232446
-      Wasser_15: 956133605
-      Wasser_7: -1927068148
-      Wasser_13: 498963963
-      Wasser_19: -34214087
-      Wasser_23: -218642116
-      Wasser_26: 2101911046
-      Wasser_35: 1101801072
-      Wasser_48: -648740883
-      Wasser_11: -1093847596
-      Wasser_2: 1636953073
-      Wasser_4: 487691247
-      Wasser_25: 7314953
-      Wasser_28: 1078908837
-      Wasser_55: 1119424343
-      Wasser_21: -1233145440
-      Wasser_6: -1201609677
-      Wasser_0: -1517870776
-      Wasser_18: 1258580142
-      Wasser_24: -268443512
-      Wasser_3: -1306386812
-      Wasser_27: 1576919323
-      Wasser_38: -1960430917
-      Wasser_51: 274540215
-      Wasser_33: 1868261436
-      Wasser_12: -8421238
-      Wasser_42: -582485474
-      Wasser_34: -2085544564
-      Wasser_31: -1416588765
-      Wasser_37: 482797989
-      Wasser_52: -474146591
+      Fels_16: 558748228
+      Fels_51: 302982260
+      Fels_68: 1011414059
+      Fels_13: 1086690478
+      Fels_7: 448343443
+      Fels_53: 487461072
+      Fels_5: -1211977672
+      Fels_8: -1280381698
+      Fels_42: -904034101
+      Fels_17: -1326463343
+      Fels_36: 319989942
+      Fels_48: -481448551
+      Fels_50: 1377269129
+      Fels_0: -1669375692
+      Fels_55: -1921208812
+      Fels_66: -2003613261
+      Fels_39: -237284719
+      Fels_56: -137134127
+      Fels_4: 1466527932
+      Fels_25: -1949441915
+      Fels_45: -1270445371
+      Fels_49: -499027714
+      Fels_6: 1145820
+      Fels_47: -298523950
+      Fels_31: -1344101007
+      Fels_2: 483276525
+      Fels_12: 1714748549
+      Fels_64: -434918321
+      Fels_24: -551336663
+      Fels_26: -663417497
+      Fels_23: -552717888
+      Fels_40: 1519999825
+      Fels_9: -2199493
+      Fels_11: -146320159
+      Fels_43: 1223661486
+      Fels_65: -474329794
+      Fels_27: -1116850792
+      Fels_3: -353377944
+      Fels_29: 1345016698
+      Fels_34: -587609346
+      Fels_60: 1078231104
+      Fels_57: 1230580485
+      Fels_33: -121486229
+      Fels_41: 466824627
+      Fels_21: 1976453759
+      Fels_10: 269086616
+      Fels_63: -763133857
+      Fels_38: -2077888071
+      Fels_35: 747305379
+      Fels_22: -521830010
+      Fels_1: -1317798503
+      Fels_37: -131029874
+      Fels_59: 250391670
+      Fels_15: 1346494614
+      Fels_32: -444967
+      Fels_62: 210866760
+      Fels_14: -1952849068
+      Fels_30: 2121983800
+      Fels_28: -138968165
+      Fels_20: 498763610
+      Fels_44: -1184531985
+      Fels_52: -707498163
+      Fels_46: 726883124
+      Fels_67: -539960489
+      Fels_18: -1610244567
+      Fels_61: 1179917440
+      Fels_19: -643139321
+      Fels_58: 938526886
+      Fels_54: -650493407
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
