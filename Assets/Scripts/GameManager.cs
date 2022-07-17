@@ -104,11 +104,15 @@ public class GameManager : MonoBehaviour {
     canvasGroupGameOver.interactable = false;
 
     FinishScene(true);
+    Player.GetComponent<PlayerMovement>().ApplyMovementBlockTime(0);
 
-    
   }
 
   public void MainMenu() {
+    foreach (GameObject go in _keepOnSceneChange) {
+      SceneManager.MoveGameObjectToScene(go, SceneManager.GetActiveScene());
+    }
+
     StartCoroutine(LoadStartSceneAsyncMainMenu());
   }
 
@@ -228,6 +232,8 @@ public class GameManager : MonoBehaviour {
       canvasGroupGameOver.alpha = 1.0f;
       canvasGroupGameOver.blocksRaycasts = true;
       canvasGroupGameOver.interactable = true;
+      Player.GetComponent<PlayerMovement>().ApplyMovementBlockTime(1000);
+
     } else {
       Respawn();
     }
