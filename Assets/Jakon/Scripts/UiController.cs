@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class UiController : MonoBehaviour
 {
     public GameObject optionMenu;
+    public GameObject CreditsScreen;
     public GameObject mainMenu;
     public GameObject keybindMenu;
     public GameObject gameOverMenu;
@@ -20,11 +21,13 @@ public class UiController : MonoBehaviour
         keybindMenu = GameObject.Find("Canvas/KeybindMenu");
         gameOverMenu = GameObject.Find("Canvas/GameOver");
         winningScreen = GameObject.Find("Canvas/Winning Screen");
+        CreditsScreen = GameObject.Find("Canvas/Credits");
         
         optionMenu.SetActive(false);
         keybindMenu.SetActive(false);
         gameOverMenu.SetActive(false);
         winningScreen.SetActive(false);
+        CreditsScreen.SetActive(false);
     }
     public void StartGame()
     {
@@ -70,11 +73,21 @@ public class UiController : MonoBehaviour
         gameOverMenu.SetActive(false);
         keybindMenu.SetActive(false);
         optionMenu.SetActive(false);
+        CreditsScreen.SetActive(false);
         mainMenu.SetActive(true);
         if (!mainTheme.isPlaying)
         {
             mainTheme.Play();
         }
+    }
+    public void Credits()
+    {
+        winningScreen.SetActive(false);
+        gameOverMenu.SetActive(false);
+        keybindMenu.SetActive(false);
+        optionMenu.SetActive(false);
+        mainMenu.SetActive(false);
+        CreditsScreen.SetActive(true);
     }
 }
 
