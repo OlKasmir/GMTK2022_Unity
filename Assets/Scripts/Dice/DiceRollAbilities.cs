@@ -36,6 +36,8 @@ public class DiceRollAbilities : MonoBehaviour {
   private float _refuelDelay = 2.0f;
   [SerializeField]
   private float _refuelTime = 0.5f;
+  [SerializeField]
+  private float _maxVerticalSpeedDivider = 300;
   private Countdown _refuelCountdown;
   // private bool refueling = false;
   private float _currentFuel;
@@ -225,7 +227,11 @@ public class DiceRollAbilities : MonoBehaviour {
     FuelChange?.Invoke(this, new FuelChangeEventArgs() { currentFuel = CurrentFuel });
     RefuelCountdown.Reset();
 
-    rb.AddRelativeForce(Vector2.up * Time.deltaTime * speed);
+    //rb.velocity
+    rb.AddForce(Vector2.up * Time.deltaTime * speed);
+    float maxVel = speed / _maxVerticalSpeedDivider;
+    rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -maxVel, maxVel));
+
     if (!audioSourceJetpack.isPlaying) {
       audioSourceJetpack = AudioManager.Instance.PlaySound(duesenSound, transform.position); //audioSourceJetpack.PlayOneShot(duesenSound);
     }

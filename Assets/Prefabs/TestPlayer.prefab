@@ -152,6 +152,7 @@ MonoBehaviour:
   _fuelTime: 1.8
   _refuelDelay: 1.5
   _refuelTime: 0.5
+  _maxVerticalSpeedDivider: 300
   _dashCooldown:
     _startTime: 0
     _cooldown: 1
