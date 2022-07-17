@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour {
   public void FinishGame() {
     if (gameObject.transform.parent != null) {
       Player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+      UpdateMapConfiner();
       return;
     }
 
@@ -122,10 +123,40 @@ public class GameManager : MonoBehaviour {
     Spawn  = GameObject.FindGameObjectWithTag("Respawn");
     Finish = GameObject.FindGameObjectWithTag("Finish");
 
+    UpdateMapConfiner();
+
+
+
+
+
+
     _player.transform.position = Spawn.transform.position;
 
     if(_currentSceneCount - 1 < _musicTracks.Count)
       AudioManager.Instance.PlayMusic(_musicTracks[_currentSceneCount - 1]);
+  }
+
+  public void UpdateMapConfiner() {
+    GameObject mapConfiner = GameObject.FindGameObjectWithTag("CameraBounds");
+    if (mapConfiner != null) {
+      Collider2D mapConfinerCollider = mapConfiner.GetComponent<Collider2D>();
+
+      if (mapConfinerCollider != null) {
+        Cinemachine.CinemachineConfiner2D confiner = Camera.main.GetComponentInChildren<Cinemachine.CinemachineConfiner2D>();
+        if (confiner != null) {
+          confiner.m_BoundingShape2D = mapConfinerCollider;
+        } else {
+          Debug.LogWarning("No Confiner Extension found on Camera");
+        }
+      } else {
+        Debug.LogWarning("No Collider on Camera Bounds!");
+      }
+
+
+
+    } else {
+      Debug.LogWarning("No Camera Bounds found");
+    }
   }
 
   public void LoadScene(string sceneName) {
@@ -133,6 +164,6 @@ public class GameManager : MonoBehaviour {
   }
 
   public void GameOver() {
-
+    AudioManager.Instance.PlaySound("PlayerDeath");
   }
 }

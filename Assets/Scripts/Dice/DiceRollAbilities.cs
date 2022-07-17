@@ -284,10 +284,11 @@ public class DiceRollAbilities : MonoBehaviour {
 
     if (DiceRollMechanic.GetCurrentSide() == 2) {
       Stick();
+      AudioManager.Instance.PlaySound("Stick");
     }
 
     // Stomp hitting enemy
-    if (DiceRollMechanic.GetCurrentSide() == 4) {
+    if (DiceRollMechanic.GetCurrentSide() == 4 && _stomping) {
       if (collision.collider.tag == "Enemy") {
         collision.gameObject.GetComponent<Enemy>().Kill();
       }
@@ -314,8 +315,6 @@ public class DiceRollAbilities : MonoBehaviour {
     if (_sticking)
       return;
 
-
-
     if (_currentPlatform == null)
       return;
 
@@ -330,6 +329,8 @@ public class DiceRollAbilities : MonoBehaviour {
     if (!_sticking)
       return;
 
+    AudioManager.Instance.PlaySound("StopStick");
+
     rb.gravityScale = _previousGravity;
     movement.ApplyMovementBlockTime(0.0f);
     rb.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -338,7 +339,7 @@ public class DiceRollAbilities : MonoBehaviour {
   }
 
   private void StartBlock() {
-
+    AudioManager.Instance.PlaySound("Shield");
   }
 
   private void StopBlock() {
