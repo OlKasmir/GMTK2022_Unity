@@ -53,6 +53,8 @@ public class Projectile : MonoBehaviour {
   }
 
   private void DamagePlayer() {
-    Debug.Log("Player damaged. TODO: Kill Player");
+    if (GameManager.Instance.Player.GetComponent<DiceRollMechanicSimple>().GetCurrentSide() != 6) {
+      GameManager.Instance.GameOver();
+    }
   }
 }

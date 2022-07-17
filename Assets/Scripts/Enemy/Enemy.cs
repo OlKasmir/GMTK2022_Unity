@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
+  public delegate void OnDeathEvent();
+  public event OnDeathEvent OnDeath;
+
   [SerializeField, HideInInspector]
   private Rigidbody2D rb;
   [SerializeField, HideInInspector]
@@ -191,6 +194,7 @@ public class Enemy : MonoBehaviour {
       ps.Play();
     }
 
+    OnDeath?.Invoke();
     Destroy(gameObject);
   }
 }
