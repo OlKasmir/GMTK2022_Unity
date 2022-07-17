@@ -2444,8 +2444,8 @@ MonoBehaviour:
   keybindMenu: {fileID: 2125671485}
   gameOverMenu: {fileID: 637497528}
   winningScreen: {fileID: 561251324}
-  winningTheme: {fileID: 0}
-  mainTheme: {fileID: 0}
+  winningTheme: {fileID: 966106413}
+  mainTheme: {fileID: 583161780}
 --- !u!4 &818451834
 Transform:
   m_ObjectHideFlags: 0
