@@ -80,6 +80,9 @@ public class GameManager : MonoBehaviour {
   }
 
   public void FinishGame() {
+    if (gameObject.transform.parent != null)
+      return;
+
     foreach(GameObject go in _keepOnSceneChange) {
       SceneManager.MoveGameObjectToScene(go, SceneManager.GetActiveScene());
     }
