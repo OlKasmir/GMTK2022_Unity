@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3202624870785133991}
   - component: {fileID: 3202624870785133992}
   - component: {fileID: 3202624870785133993}
+  - component: {fileID: 6741158383754269306}
   m_Layer: 7
   m_Name: EnemyDuck
   m_TagString: Enemy
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -955190850, guid: a7442cb306281194d9505c2b94e4499f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -143,10 +144,10 @@ MonoBehaviour:
   _particleSystemDeath: {fileID: 5664874782648696988, guid: 96309ca83852b44449c7b9a4a1c65e7e, type: 3}
   _deathSound: DuckDeath*
   _moveTowardsPlayer: 1
-  _movementSpeed: 5
+  _movementSpeed: 15
   _acceleration: 5
-  _minDistance: 3
-  _projectilePrefab: {fileID: 5197915181660499221, guid: cdb90d3f232a44f45ad2ae2cce4924e3, type: 3}
+  _minDistance: 1
+  _projectilePrefab: {fileID: 0}
   _projectileForce: 1
   _shootCooldownTime: 3
   _distanceFromEntityWhenSpawning: 1
@@ -156,7 +157,28 @@ MonoBehaviour:
   _maxViewDistance: 25
   _shootOffset: {x: 0, y: 0.5, z: 0}
   _attackSound: Duck*
+  _changeProjectileGravity: 1
+  _projectileGravityMultiplier: 0
   _attackAnim: {fileID: 3202624871060475679}
+  _autoEndAnim: 0
+--- !u!114 &6741158383754269306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3202624870785133994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d797fde3c3fac74b98e123d860f56b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionDistance: 2.5
+  explosionFuseTime: 0.5
+  _prefabExplosion: {fileID: 1019449610880945766, guid: d5a6912dde44acd4dbd503e3e1bdfcf0, type: 3}
+  explosionSound: Explosion*
+  fuseSound: Sizzle*
+  fuse: {fileID: 0}
 --- !u!1 &3202624871060475648
 GameObject:
   m_ObjectHideFlags: 0

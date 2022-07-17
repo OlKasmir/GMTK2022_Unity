@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 1695242859065314864}
   m_Layer: 6
   m_Name: TestPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -966588774, guid: 7ea36d43e4ded2d4c98285d1e31e22b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -158,6 +158,11 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 5197915181660499221, guid: cdb90d3f232a44f45ad2ae2cce4924e3, type: 3}
   _projectileForce: 1
   _shootCooldownTime: 0.5
+  _prefabStompParticleSysten: {fileID: 107037322426684793, guid: 8e548b97e4f98dd4db1e3bec4d9a277c, type: 3}
+  _stompTimeUp: 0.2
+  _stompForceUp: 25
+  _stompTimeDown: 0.5
+  _stompForceDown: 50
 --- !u!58 &58322498860152043
 CircleCollider2D:
   m_ObjectHideFlags: 0

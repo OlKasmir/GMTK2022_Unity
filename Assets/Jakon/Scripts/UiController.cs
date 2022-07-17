@@ -10,6 +10,8 @@ public class UiController : MonoBehaviour
     public GameObject keybindMenu;
     public GameObject gameOverMenu;
     public GameObject winningScreen;
+    public AudioSource winningTheme;
+    public AudioSource mainTheme;
     // Start is called before the first frame update
     private void Start()
     {
@@ -18,6 +20,7 @@ public class UiController : MonoBehaviour
         keybindMenu = GameObject.Find("Canvas/KeybindMenu");
         gameOverMenu = GameObject.Find("Canvas/GameOver");
         winningScreen = GameObject.Find("Canvas/Winning Screen");
+        
         optionMenu.SetActive(false);
         keybindMenu.SetActive(false);
         gameOverMenu.SetActive(false);
@@ -27,6 +30,13 @@ public class UiController : MonoBehaviour
     {
         winningScreen.SetActive(true);
         mainMenu.SetActive(false);
+        if (!winningTheme.isPlaying)
+        {
+            winningTheme.Play();
+        }
+
+        mainTheme.Stop();
+
     }
 
     public void ShowBindings()
@@ -54,6 +64,10 @@ public class UiController : MonoBehaviour
         keybindMenu.SetActive(false);
         optionMenu.SetActive(false);
         mainMenu.SetActive(true);
+        if (!mainTheme.isPlaying)
+        {
+            mainTheme.Play();
+        }
     }
 }
 

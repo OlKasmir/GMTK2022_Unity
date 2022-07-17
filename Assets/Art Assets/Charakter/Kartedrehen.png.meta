@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,7 +114,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kartedrehen_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 5
+        width: 32
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3965614c16c54bb4994055b384cd52a8
+      internalID: -305203309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_1
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 5
+        width: 27
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d305304fcca6c4bac22ff2d4094118
+      internalID: 1855191387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_2
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 5
+        width: 22
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc932bff385a46e4bbcecb9806c812cb
+      internalID: -162083867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_3
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 5
+        width: 15
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fa94b88df0f64428242a20104fb7aa
+      internalID: 1960387597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_4
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 5
+        width: 10
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec5bd3df17269d4291debfc79a789af
+      internalID: -1620160914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_5
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 5
+        width: 5
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b128d1d6e4118ea44acfacf8961da8f6
+      internalID: -411342644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_6
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 5
+        width: 3
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadd800f405df8d42a99c3f912d44df3
+      internalID: -1903431533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_7
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 5
+        width: 8
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3796bead83b404781520738c767e83
+      internalID: 1107019884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_9
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 5
+        width: 13
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcfa8b53df4ed44e89029e38e77c780
+      internalID: -854671749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_10
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 5
+        width: 21
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fc1fc3782bac8469b12c3a5f2bd4d7
+      internalID: 377649009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_11
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 5
+        width: 33
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fb879d93347b64bae64a78e7764e5b
+      internalID: -1881274281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_12
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 5
+        width: 40
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c371a4e21f5c3842b47e9d0fec75055
+      internalID: -1076606974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartedrehen_8
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 5
+        width: 8
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1b3bd57417b1a458508a68647aa97c
+      internalID: 1949331711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +398,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kartedrehen_2: -162083867
+      Kartedrehen_12: -1076606974
+      Kartedrehen_7: 1107019884
+      Kartedrehen_6: -1903431533
+      Kartedrehen_1: 1855191387
+      Kartedrehen_8: 1949331711
+      Kartedrehen_10: 377649009
+      Kartedrehen_4: -1620160914
+      Kartedrehen_9: -854671749
+      Kartedrehen_11: -1881274281
+      Kartedrehen_0: -305203309
+      Kartedrehen_5: -411342644
+      Kartedrehen_3: 1960387597
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

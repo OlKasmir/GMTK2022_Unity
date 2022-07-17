@@ -42,30 +42,44 @@ public class Enemy : MonoBehaviour {
   private Vector3 _shootOffset;
   [SerializeField]
   private string _attackSound;
+  [SerializeField]
+  private bool _changeProjectileGravity = false;
+  [SerializeField]
+  private float _projectileGravityMultiplier = 1.0f;
 
   [SerializeField, Header("Animation")]
   private SpriteAnimatorSimple _attackAnim;
+  [SerializeField]
+  private bool _autoEndAnim = true;
 
   public GameObject Player => GameManager.Instance.Player;
 
+  public SpriteAnimatorSimple AttackAnim { get => _attackAnim; set => _attackAnim = value; }
+  public bool AutoEndAnim { get => _autoEndAnim; set => _autoEndAnim = value; }
+  public string AttackSound { get => _attackSound; set => _attackSound = value; }
 
   private void Awake() {
     rb = GetComponent<Rigidbody2D>();
     sr = GetComponent<SpriteRenderer>();
     _shootCooldown = new Cooldown(_shootCooldownTime);
 
-    if(_attackAnim != null) {
-      _attackAnim.AnimatorEnd += _attackAnim_AnimatorEnd;
+    if(AttackAnim != null) {
+      AttackAnim.AnimatorEnd += _attackAnim_AnimatorEnd;
     }
   }
 
   private void _attackAnim_AnimatorEnd() {
-    _attackAnim.Hide();
+    if(AutoEndAnim)
+      EndAttackAnimation();
+  }
+
+  public void EndAttackAnimation() {
+    AttackAnim.Hide();
     sr.enabled = true;
   }
 
-  private void StartAttackAnimation() {
-    _attackAnim.Show();
+  public void StartAttackAnimation() {
+    AttackAnim.Show();
     sr.enabled = false;
   }
 
@@ -94,9 +108,13 @@ public class Enemy : MonoBehaviour {
     return true;
   }
 
+  public float GetPlayerDistance() {
+    return Vector2.Distance(Player.transform.position, transform.position);
+  }
+
   public void TryMoveTowardsPlayer() {
     if (IsPlayerInSight()) {
-      if (Vector2.Distance(Player.transform.position, transform.position) <= _minDistance)
+      if (GetPlayerDistance() <= _minDistance)
         return;
       
       float dirX = Player.transform.position.x < transform.position.x ? -1.0f : 1.0f;
@@ -112,6 +130,9 @@ public class Enemy : MonoBehaviour {
   }
 
   public void TryFireProjectile() {
+    if (_projectilePrefab == null)
+      return;
+
     if (!_shootCooldown.Check()) {
       return;
     }
@@ -123,8 +144,8 @@ public class Enemy : MonoBehaviour {
   }
 
   public void FireProjectile() {
-    if (!string.IsNullOrEmpty(_attackSound)) {
-      AudioManager.Instance.PlaySound(_attackSound);
+    if (!string.IsNullOrEmpty(AttackSound)) {
+      AudioManager.Instance.PlaySound(AttackSound);
     }
 
     StartAttackAnimation();
@@ -138,7 +159,8 @@ public class Enemy : MonoBehaviour {
 
     Physics2D.IgnoreCollision(go.GetComponent<Collider2D>(), GetComponent<Collider2D>());
 
-    rb.gravityScale = 0.0f;
+    if(_changeProjectileGravity)
+      rb.gravityScale = _projectileGravityMultiplier;
 
     Projectile p = go.GetComponent<Projectile>();
     if (p == null) {
@@ -148,7 +170,7 @@ public class Enemy : MonoBehaviour {
   }
 
   public void Kill() {
-    if (string.IsNullOrEmpty(_deathSound))
+    if (!string.IsNullOrEmpty(_deathSound))
       AudioManager.Instance.PlaySound(_deathSound);
 
     if(_particleSystemDeath != null) {

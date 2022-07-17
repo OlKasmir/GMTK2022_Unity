@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 2257819850932717426}
   - component: {fileID: 2257819850932717427}
   - component: {fileID: 2257819850932717420}
+  - component: {fileID: 5836669078282180564}
   m_Layer: 7
   m_Name: EnemyCard
   m_TagString: Enemy
@@ -190,7 +191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1344416460, guid: e20ee695074548644923f4a6e0693a74, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -222,7 +223,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!114 &2257819850932717427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +255,8 @@ MonoBehaviour:
   _maxViewDistance: 25
   _shootOffset: {x: 0, y: 0, z: 0}
   _attackSound: CardAttack*
+  _changeProjectileGravity: 1
+  _projectileGravityMultiplier: 0
   _attackAnim: {fileID: 2257819850441591314}
 --- !u!61 &2257819850932717420
 BoxCollider2D:
@@ -281,3 +284,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 4.875}
   m_EdgeRadius: 0
+--- !u!114 &5836669078282180564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257819850932717421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e592cb796cd144fb4fe8ec192c7452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  height: 1
