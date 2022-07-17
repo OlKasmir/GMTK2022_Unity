@@ -80,7 +80,27 @@ public class GameManager : MonoBehaviour {
   }
 
   public void FinishGame() {
-    Debug.Log("Game Won");
+    foreach(GameObject go in _keepOnSceneChange) {
+      SceneManager.MoveGameObjectToScene(go, SceneManager.GetActiveScene());
+    }
+    // SceneManager.MoveGameObjectToScene(gameObject, SceneManager.GetActiveScene());
+
+    //SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
+
+    StartCoroutine(LoadStartSceneAsync());
+  }
+
+  public IEnumerator LoadStartSceneAsync() {
+    AsyncOperation async = SceneManager.LoadSceneAsync("StartScene", LoadSceneMode.Single);
+
+    while(!async.isDone) {
+      yield return null;
+    }
+
+    UiController c = FindObjectOfType<UiController>();
+    c.GameWon();
+
+    Destroy(gameObject);
   }
 
   public IEnumerator InvokeDelayed(float delay) {

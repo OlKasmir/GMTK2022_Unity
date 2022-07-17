@@ -48,6 +48,7 @@ public class SpriteAnimatorSimple : MonoBehaviour {
     //  _editorStartTime = EditorApplication.timeSinceStartup;
   }
 
+#if UNITY_EDITOR
   private void OnValidate() {
     if (_tex == null)
       return;
@@ -55,6 +56,7 @@ public class SpriteAnimatorSimple : MonoBehaviour {
     string texturePath = AssetDatabase.GetAssetPath(_tex);
     _sprites = AssetDatabase.LoadAllAssetsAtPath(texturePath).OfType<Sprite>().ToArray();
   }
+#endif
 
   private void OnRenderObject() {
     UpdateAnimation();
@@ -91,6 +93,7 @@ public class SpriteAnimatorSimple : MonoBehaviour {
       indexReset = true;
     }
 
+#if UNITY_EDITOR
     if (Application.isEditor && !Application.isPlaying) {
       //if (_editorLastTickTime == 0)
       //  _editorLastTickTime = EditorApplication.timeSinceStartup;
@@ -102,6 +105,7 @@ public class SpriteAnimatorSimple : MonoBehaviour {
       }
 
     } else {
+#endif
       timer += Time.deltaTime;
       if (timer >= (_duration / _sprites.Length)) {
         if (_destroyWhenFinished && index == _sprites.Length - 1) {
@@ -117,13 +121,15 @@ public class SpriteAnimatorSimple : MonoBehaviour {
           indexReset = true;
         }
       }
+#if UNITY_EDITOR
     }
-
+#endif
     if (indexReset) {
       AnimatorEnd?.Invoke();
     }
   }
-  #endregion
+
+#endregion
 
   #region Coroutines
   #endregion

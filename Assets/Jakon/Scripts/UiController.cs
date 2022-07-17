@@ -28,16 +28,20 @@ public class UiController : MonoBehaviour
     }
     public void StartGame()
     {
-        winningScreen.SetActive(true);
-        mainMenu.SetActive(false);
-        if (!winningTheme.isPlaying)
-        {
-            winningTheme.Play();
-        }
-
-        mainTheme.Stop();
-
+      SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
+
+  public void GameWon() {
+    Debug.Log("GameWon");
+
+    winningScreen.SetActive(true);
+    mainMenu.SetActive(false);
+    if (!winningTheme.isPlaying) {
+      winningTheme.Play();
+    }
+
+    mainTheme.Stop();
+  }
 
     public void ShowBindings()
     {
@@ -53,9 +57,12 @@ public class UiController : MonoBehaviour
     }
     public void End()
     {
-        //Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
-    }
+#if UNITY_EDITOR
+    UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+  }
 
     public void Back()
     {
