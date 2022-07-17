@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour {
 
     if (grounded) {
       hangCountdown.Reset();
-      Debug.Log("Resetting");
+      // Debug.Log("Resetting");
     }
 
     float hDirection = Input.GetAxis("Horizontal");
