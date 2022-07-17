@@ -13,6 +13,9 @@ public class UiController : MonoBehaviour
     public GameObject winningScreen;
     public AudioSource winningTheme;
     public AudioSource mainTheme;
+
+  private bool won = false;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -28,13 +31,21 @@ public class UiController : MonoBehaviour
         gameOverMenu.SetActive(false);
         winningScreen.SetActive(false);
         CreditsScreen.SetActive(false);
+
+    if (won) GameWon();
     }
     public void StartGame()
     {
       SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
     }
 
+  public void BackFromWinScreen() {
+    won = false;
+  }
+
   public void GameWon() {
+    won = true;
+
     Debug.Log("GameWon");
 
     winningScreen.SetActive(true);

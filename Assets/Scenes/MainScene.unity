@@ -1267,12 +1267,12 @@ MonoBehaviour:
   - {fileID: 1246396562}
   - {fileID: 324633428}
   _sceneNamesInOrder:
-  - Level1
-  - Level2
-  - Level3
-  - Level4
-  - Level5
+  - LevelTutorial
+  - Level1First
+  - Level2Second
+  - Level3Third
   _musicTracks:
+  - {fileID: 8300000, guid: bce5627920315f143a7762acf42a134a, type: 3}
   - {fileID: 8300000, guid: bce5627920315f143a7762acf42a134a, type: 3}
   - {fileID: 8300000, guid: 43dd27161709a3f44859caf0f7b98879, type: 3}
   - {fileID: 8300000, guid: 15c27d3bbea95f54db5a885f8b45cc7a, type: 3}

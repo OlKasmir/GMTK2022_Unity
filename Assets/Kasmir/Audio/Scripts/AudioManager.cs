@@ -115,6 +115,11 @@ public class AudioManager : MonoBehaviour {
 
     //if(soundQueueEnabled)
     //  StartCoroutine(PlaySoundQueue());
+
+    if (PlayerPrefs.HasKey("Volume")) {
+      float volume = PlayerPrefs.GetFloat("Volume");
+      audioMixer.SetFloat("MasterVolume", volume);
+    }
   }
 
   public void OnDestroy() {
