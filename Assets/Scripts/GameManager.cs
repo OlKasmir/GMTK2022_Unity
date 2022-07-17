@@ -158,6 +158,9 @@ public class GameManager : MonoBehaviour {
     UiController c = FindObjectOfType<UiController>();
     c.GameWon();
 
+    yield return new WaitForSeconds(0.5f);
+    c.GameWon();
+
     Destroy(gameObject);
   }
 
@@ -185,8 +188,7 @@ public class GameManager : MonoBehaviour {
 
     StartCoroutine(ToSpawnDelayed());
 
-    if(_currentSceneCount - 1 < _musicTracks.Count)
-      AudioManager.Instance.PlayMusic(_musicTracks[_currentSceneCount - 1]);
+    AudioManager.Instance.PlayMusic(_musicTracks[(_currentSceneCount - 1) % (_musicTracks.Count)]);
   }
 
   public IEnumerator ToSpawnDelayed() {

@@ -9,8 +9,10 @@ public class MusicPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    if (PlayerPrefs.HasKey("Volume")) {
+      musicVolume = PlayerPrefs.GetFloat("Volume");
     }
+  }
 
     // Update is called once per frame
     void Update()
@@ -23,6 +25,9 @@ public class MusicPlayer : MonoBehaviour
 
     public void UpdateVolume(float volume)
     {
+
+
         musicVolume = volume;
+    PlayerPrefs.SetFloat("Volume", musicVolume);
     }
 }

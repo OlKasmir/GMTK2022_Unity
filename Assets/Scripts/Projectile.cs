@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour {
   public GameObject Owner { get => _owner; set => _owner = value; }
 
   private Countdown countdownDestroy;
-
+  private Rigidbody2D rb;
 
   public int _maxBounces = 0;
   public string _bounceSound;
@@ -16,12 +16,19 @@ public class Projectile : MonoBehaviour {
 
   private void Awake() {
     countdownDestroy = new Countdown(5.0f);
+    rb = GetComponent<Rigidbody2D>();
   }
 
   private void FixedUpdate() {
     if (countdownDestroy.Check()) {
       Destroy(gameObject);
     }
+
+    float scaleX = 1.0f;
+    if (rb.velocity.x < 0.0f)
+      scaleX = -1.0f;
+
+    transform.localScale = new Vector3(transform.localScale.x * scaleX, transform.localScale.y, transform.localScale.z);
   }
 
   private void OnCollisionEnter2D(Collision2D collision) {
