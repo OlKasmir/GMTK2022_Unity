@@ -37,6 +37,7 @@ public class Duck : MonoBehaviour {
 
       StopAllCoroutines();
       _triggered = false;
+      _exploding = false;
     }
 
     if(enemy.GetPlayerDistance() <= explosionDistance) {
