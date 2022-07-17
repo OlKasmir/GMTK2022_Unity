@@ -16,7 +16,7 @@ public class Countdown {
   #endregion
 
   #region Getter and Setter
-  public float StartTime { get => _startTime; }
+  public float StartTime { get => _startTime; set => _startTime = value; }
   public float Duration { get => _duration; set => _duration = value; }
   public float TimeLeft { get => Mathf.Max(0, _duration - (Time.time - _startTime)); }
   #endregion

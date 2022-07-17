@@ -214,7 +214,7 @@ public class AudioManager : MonoBehaviour {
   /// <param name="soundName">Sound* will play a random sound containing Sound in front (Regex)</param>
   /// <param name="forcePlay">If true the sound will play instantly (Not queuing if enabled)</param>
   public AudioSource PlaySound(string soundName, bool forcePlay = false, float volumeScale = 1f) {
-    Debug.Log($"Playing Sound {soundName}");
+    // Debug.Log($"Playing Sound {soundName}");
 
     if (soundName == null || soundName == "")
       return null;

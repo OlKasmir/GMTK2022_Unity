@@ -27,6 +27,10 @@ public class Duck : MonoBehaviour {
       enemy.StartAttackAnimation();
       StartCoroutine(DuckSounds());
       _triggered = true;
+    } else {
+
+      StopAllCoroutines();
+      _triggered = false;
     }
 
     if(enemy.GetPlayerDistance() <= explosionDistance) {
