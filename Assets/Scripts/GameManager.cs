@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
   }
 
   public GameObject Player { get => _player; set => _player = value; }
+  public GameObject Spawn { get => _spawn; set => _spawn = value; }
+  public GameObject Finish { get => _finish; set => _finish = value; }
 
   private void Awake() {
     if (_instance != null && _instance != this) {
@@ -117,10 +119,10 @@ public class GameManager : MonoBehaviour {
   }
 
   public void InitScene() {
-    _spawn  = GameObject.FindGameObjectWithTag("Respawn");
-    _finish = GameObject.FindGameObjectWithTag("Finish");
+    Spawn  = GameObject.FindGameObjectWithTag("Respawn");
+    Finish = GameObject.FindGameObjectWithTag("Finish");
 
-    _player.transform.position = _spawn.transform.position;
+    _player.transform.position = Spawn.transform.position;
 
     if(_currentSceneCount - 1 < _musicTracks.Count)
       AudioManager.Instance.PlayMusic(_musicTracks[_currentSceneCount - 1]);
