@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,7 +114,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Kartegesicht_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d683c6c946df9741922273436fd295b
+      internalID: 1344416460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5d79b9c03142641972bba0af3183fe
+      internalID: 1874923697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_2
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70379226af9f5c84ab234a2dd6cbed58
+      internalID: 1201722182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0976ebe0364e2ba46a316c3eb8ba7db5
+      internalID: 87567350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_4
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7422e2ccf7e60d46a474c18433cd403
+      internalID: 323609593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_5
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bdd51f00b4aed46907ae97f7cdbefb
+      internalID: -41635023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_6
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cf9e720e2823e45b9f1699eb986da2
+      internalID: 804902152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_7
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e8c5f6320ccc441904d7d817e5a38e
+      internalID: -187607349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_8
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d071794bdcb8e498f99e4239cccaea
+      internalID: -2111896155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_9
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5496166360d14d4fa020b6189139cd7
+      internalID: 1130987521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_10
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb315944d3b6c24f9dca23cf51c3861
+      internalID: -459968418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_11
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d77c2ed56d123a468d95b62a0bca391
+      internalID: -97040475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartegesicht_12
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 5
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.275, y: 0.435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234dc9f1d2e33a643af28b66813264ff
+      internalID: 1976232288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +398,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Kartegesicht_4: 323609593
+      Kartegesicht_11: -97040475
+      Kartegesicht_9: 1130987521
+      Kartegesicht_12: 1976232288
+      Kartegesicht_5: -41635023
+      Kartegesicht_3: 87567350
+      Kartegesicht_8: -2111896155
+      Kartegesicht_10: -459968418
+      Kartegesicht_7: -187607349
+      Kartegesicht_2: 1201722182
+      Kartegesicht_0: 1344416460
+      Kartegesicht_6: 804902152
+      Kartegesicht_1: 1874923697
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
