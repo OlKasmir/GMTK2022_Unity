@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour {
   // private enum State { idle, running, extra, falling, hurt }
   //private State state = State.idle;
   private Collider2D coll;
+  [SerializeField]
+  private Collider2D groundCheckCollider;
 
   // Inspector Variables
   [SerializeField] private LayerMask ground;
@@ -71,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
   private void MovementManager() {
 
 
-    bool grounded = coll.IsTouchingLayers(ground);
+    bool grounded = groundCheckCollider.IsTouchingLayers(ground);
 
     if (grounded) {
       hangCountdown.Reset();
